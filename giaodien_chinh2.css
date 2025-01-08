@@ -68,7 +68,8 @@ body {
     padding: 25px;
     color: #fff;
     text-align: center;
-    height:400px ;
+    /* height:400px ; */
+    height: 45%;
 }
 
 .search-section h1 {
@@ -122,7 +123,8 @@ body {
 
 .search-bar input{
 
-width: 700px;
+/* width: 700px; */
+width: 41%;
 }
 
 .search-bar button {
