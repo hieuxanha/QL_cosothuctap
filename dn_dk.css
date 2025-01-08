@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    width: 350px;
+    position: relative;
+    background:white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    padding: 20px;
+}
+
+.form-box {
+    width: 100%;
+}
+
+.button-box {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #ff5722;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    width: 45%;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: #ff784e;
+}
+
+.input-group {
+    width: 100%;
+    display: none; /* Form mặc định ẩn đi */
+    flex-direction: column;
+}
+
+.input-group h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.input-field:focus {
+    border-bottom: 1px solid #ff5722;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    background: #BCD5E3;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #579fc9;
+}
+
+.check-box {
+    margin: 15px 10px;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+}
+
+/* Khi hiển thị form đăng nhập */
+#loginForm {
+    display: block; /* Form đăng nhập hiển thị ban đầu */
+}
+
+#registerForm {
+    display: block; /* Form đăng ký sẽ bị ẩn */
+}

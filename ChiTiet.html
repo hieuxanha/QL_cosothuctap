@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/ChiTiet.css">
+    <style>
+    body {
+        /* font-family: Arial, sans-serif; */
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .header_1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_1 h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+    .header_1 .actions {
+        display: flex;
+        gap: 10px;
+    }
+    .header_1 button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .apply-btn {
+        background-color: #28a745;
+        color: white;
+    }
+    .save-btn {
+        background-color: #f8f9fa;
+        color: #343a40;
+        border: 1px solid #ced4da;
+    }
+    .details {
+        margin-top: 20px;
+    }
+    .details h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .details p {
+        margin: 5px 0;
+    }
+    .details .info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .info div {
+        text-align: center;
+    }
+    .info div p {
+        margin: 0;
+        font-weight: bold;
+    }
+    .company {
+        margin-top: 30px;
+    }
+    .company h3 {
+        margin-bottom: 10px;
+    }
+
+/* phần dưới timf kiếmkiếm */
+    .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .section {
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .section p, .section ul {
+            margin: 5px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        .section ul {
+            padding-left: 20px;
+        }
+        .section ul li {
+            margin-bottom: 5px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #218838;
+        }
+        .full-width {
+            grid-column: span 2;
+        }
+    </style>
+
+</style>
+</head>
+<body>
+
+
+    <div class="header">
+        <div class="logo">
+            <img alt="TopCV Logo" height="40"
+                src="/logo.png"
+                width="100%" />
+        </div>
+
+
+        <div class="nav">
+            <a href="#">Việc làm </a>
+            <a href="#">Hồ sơ &amp; CV</a>
+            <a href="#">Công cụ</a>
+            <a href="#">Cẩm nang nghề nghiệp</a>
+            <a href="#">TopCV Pro </a>
+            <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
+            <a class="btn" href="#">Đăng ký</a>
+            <a class="btn btn-secondary" href="#">Đăng tuyển &amp; tìm hồ sơ </a>
+        </div>
+
+    </div>
+
+
+    
+    <div class="timkiem-job">
+        <div class="search-bar">
+            <input placeholder="Khoa ..." type="text" />
+            <button>Tìm kiếm</button>
+        </div>
+    </div>
+
+
+    <!-- <div class="container">
+        <div class="header_1">
+            <h1>Customer Service - Flight Ticket App</h1>
+            <div class="actions">
+                <button class="apply-btn">Ứng tuyển ngay</button>
+                <button class="save-btn">Lưu tin</button>
+            </div>
+        </div>
+        <div class="details">
+            <h2>Chi tiết tin tuyển dụng</h2>
+            <p><strong>Chuyên môn:</strong> Chăm sóc khách hàng</p>
+            <p><strong>Mô tả công việc:</strong></p>
+            <p>Liaising between guests and partners to resolve light complexity issues via inbound, outbound, email, chat, and messaging...</p>
+            <div class="info">
+                <div>
+                    <p>Mức lương</p>
+                    <span>10 - 13 triệu</span>
+                </div>
+                <div>
+                    <p>Địa điểm</p>
+                    <span>Hồ Chí Minh</span>
+                </div>
+                <div>
+                    <p>Kinh nghiệm</p>
+                    <span>Không yêu cầu</span>
+                </div>
+            </div>
+        </div>
+        <div class="company">
+            <h3>Thông tin công ty</h3>
+            <p><strong>Công ty:</strong> TNHH Concentrix Service Vietnam</p>
+            <p><strong>Quy mô:</strong> 1000+ nhân viên</p>
+            <p><strong>Lĩnh vực:</strong> Tư vấn</p>
+            <p><strong>Địa chỉ:</strong> Tầng 4, QTSC Building...</p>
+        </div>
+    </div> -->
+
+
+    <!-- doạn dưới tim kiếm -->
+    <div class="container">
+        <!-- Section 1: Tiêu đề và thông tin chính -->
+        <div class="section">
+            <h2>Tiêu đề và thông tin chính</h2>
+            <p><strong>Tên công việc:</strong> Customer Service - Flight Ticket App</p>
+            <p><strong>Mức lương:</strong> 10 - 13 triệu</p>
+            <p><strong>Địa điểm:</strong> Hồ Chí Minh</p>
+            <p><strong>Kinh nghiệm:</strong> Không yêu cầu kinh nghiệm</p>
+            <p><strong>Hạn nộp hồ sơ:</strong> 20/01/2025</p>
+            <a href="#" class="button">Ứng tuyển ngay</a>
+        </div>
+
+        <!-- Section 2: Chi tiết tin tuyển dụng -->
+        <div class="section">
+            <h2>Chi tiết tin tuyển dụng</h2>
+            <p><strong>Chuyên môn:</strong> Chăm sóc khách hàng</p>
+            <h3>Mô tả công việc:</h3>
+            <ul>
+                <li>Liên lạc giữa khách hàng và đối tác để giải quyết các vấn đề đơn giản qua điện thoại, email, chat.</li>
+                <li>Cung cấp thông tin chính xác, đầy đủ bằng cách sử dụng các công cụ, phương pháp và quy trình phù hợp.</li>
+                <li>Xử lý nhanh các trường hợp khẩn cấp hoặc tình huống bất thường.</li>
+                <li>Đảm bảo chất lượng dịch vụ cao và mang lại trải nghiệm tích cực cho khách hàng.</li>
+                <li>Chủ động cập nhật thông tin, kiến thức về dịch vụ khách hàng.</li>
+            </ul>
+            <p><strong>Địa điểm làm việc:</strong> Tòa nhà QTSC 1 TẦNG 4 - Công Viên Phần Mềm Quang Trung, P. Tân Chánh Hiệp, Quận 12.</p>
+            <p><strong>Thời gian làm việc:</strong> Thứ 2 - Thứ 6 (08:00 đến 17:00).</p>
+        </div>
+
+        <!-- Section 3: Thông tin chung -->
+        <div class="section">
+            <h2>Thông tin chung</h2>
+            <p><strong>Cấp bậc:</strong> Nhân viên</p>
+            <p><strong>Kinh nghiệm:</strong> Không yêu cầu kinh nghiệm</p>
+            <p><strong>Số lượng tuyển:</strong> 10 người</p>
+            <p><strong>Hình thức làm việc:</strong> Toàn thời gian</p>
+            <p><strong>Giới tính:</strong> Không yêu cầu</p>
+        </div>
+
+        <!-- Section 4: Thông tin công ty -->
+        <div class="section">
+            <h2>Thông tin công ty</h2>
+            <p><strong>Tên công ty:</strong> Công ty TNHH Concentrix Service Vietnam</p>
+            <p><strong>Quy mô:</strong> 1000+ nhân viên</p>
+            <p><strong>Lĩnh vực:</strong> Tư vấn</p>
+            <p><strong>Địa điểm:</strong> Tầng 4, 6 và 7, QTSC Building 1, Lô 34, đường số 14, Công Viên Phần Mềm Quang Trung.</p>
+            <a href="#" class="button">Xem trang công ty</a>
+        </div>
+    </div>
+    
+</body>
+</html>

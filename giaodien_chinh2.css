@@ -1,0 +1,525 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    
+}
+
+.duoitimkiem {
+  border-radius: 24px;
+  color: #263a4d;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  gap: 12px;
+  height: 300px;
+  letter-spacing: .175px;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+
+.header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.header .nav .btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.header .nav .btn-secondary {
+    background-color: #343a40;
+}
+
+.search-section {
+    background-image: url('./header-bg.webp');
+    background-size: cover;
+    background-position: center center;
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+    height:400px ;
+}
+
+.search-section h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.search-section p {
+    margin: 5px 0 20px;
+    font-size: 14px;
+}
+
+
+
+.search-bar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    /* margin-left: 150px; 
+    width: 80%;
+ 
+    border-radius: 15px;
+    padding: 12px;
+    background-color: #fff; */
+    /* width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+  
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+     margin-left: 500px; */
+    display: inline;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-bar select,
+.search-bar input,
+.search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar select,
+.search-bar input {
+    width: 200px;
+}
+
+.search-bar input{
+
+width: 700px;
+}
+
+.search-bar button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Danh sách các mục dưới thanh tìm kiếm */
+.danhmuc{
+  background: #fff;
+  border-radius: 16px;
+  border-right: 1px solid #ececec;
+  /* display: flex; */
+  margin-top: 30px;
+  margin-left: 26%;
+  /* flex-direction: column; */
+  height: 280px;
+  width: 250px;
+  
+}
+
+.danhmuc_1{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0px 0;
+  width: 100%;
+ 
+}
+
+.danhmuc_1_option{
+        font-size: 14px;
+        font-weight: 350;
+        color: #263a4d;
+        padding: 15px;
+        /* margin-right: 70px; */
+
+}
+
+
+
+.danhmuc_1_heder{
+  align-items: center;
+  border-top: 1px solid #ececec;
+  /* display: flex; */
+  /* height: 30px; */
+  justify-content: flex-end;
+  padding: 10px 14px 8px 21px;
+}
+
+.danhmuc_1_heder-pag{
+  align-items: center;
+  display: flex;
+  gap: 11px;
+  height: 85%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.danhmuc_1_heder-text{
+  /* color: #7f878f; */
+  color: #7f878f;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+.cach {
+  margin-left: 70px; /* Tạo khoảng cách giữa chữ và icon */
+}
+
+.fa-angle-right {
+  font-size: 16px; /* Kích thước icon */
+}
+
+/* notenote */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Canh giữa văn bản */
+    margin: 0 auto; /* Đảm bảo nội dung nằm giữa */
+    padding: 20px;
+    max-width: 1200px; 
+  
+}
+
+.main-content .job-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+
+}
+
+.main-content .job-category select {
+    width: 200px;
+}
+
+.main-content .job-category img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+.main-content .job-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content .job-list h2 {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #28a745;
+}
+
+.main-content .job-list .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-content .job-list .filter select {
+    width: 200px;
+}
+
+.main-content .job-list .filter .tags {
+    display: flex;
+    gap: 10px;
+}
+
+.main-content .job-list .filter .tags .tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content .job-list .filter .tags .tag.active {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.main-content .job-list .jobs {
+    display: flex;
+    /* cho phep xuoongs dòng nếu ko đủ chỗ */
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    justify-content: space-between;
+   
+}
+
+.main-content .job-list .jobs .job {
+    background-color: #fff;
+    /* padding: 20px; */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 52px);
+    /* width: calc(25%-20px); */
+        /* width: calc(26% - 20px); */
+        /* width: calc(50% - 20px); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content .job-list .jobs .job img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.main-content .job-list .jobs .job h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main-content .job-list .jobs .job p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.main-content .job-list .jobs .job .salary {
+    font-size: 14px;
+    font-weight: 700;
+    color: #28a745;
+}
+
+.main-content .job-list .jobs .job .location {
+    font-size: 14px;
+    color: #666;
+}
+.job-container {
+  display: flex;
+  flex-wrap: wrap; /* Để hiển thị theo hàng */
+  gap: 16px; /* Khoảng cách giữa các box */
+  justify-content: space-between;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 10px); /* Để chia 3 box trên 1 hàng */
+  max-width: 350px;
+  box-sizing: border-box;
+}
+
+.job img {
+  flex-shrink: 0;
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.job-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.job-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.job-content .salary {
+  color: green;
+  font-weight: bold;
+}
+
+.job-content .location {
+  color: #777;
+  font-size: 12px;
+}
+
+/*  */
+.tags .tag {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+}
+
+
+
+/*  */
+.featured-industries {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .featured-industries h2 {
+    font-size: 24px;
+    color: #27ae60;
+    margin-bottom: 10px;
+  }
+  
+  .featured-industries p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .featured-industries a {
+    color: #27ae60;
+    text-decoration: none;
+  }
+  
+  .featured-industries a:hover {
+    text-decoration: underline;
+  }
+  
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .industry-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .industry-card img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .industry-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .industry-card p {
+    font-size: 14px;
+    color: #27ae60;
+    margin: 0;
+  }
+  
+
+/*end  footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-links img {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    margin: 5px;
+  }
+  
+
+
+
+
+

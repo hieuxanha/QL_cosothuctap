@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register Form</title>
+    <link rel="stylesheet" href="/dn_dk.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+
+            <!-- Form đăng nhập -->
+            <form id="loginForm" class="input-group" style="display: block;">
+                <h2>Đăng Nhập</h2>
+                <input type="text" class="input-field" placeholder="Mã sinh viên " required><br>
+                <input type="password" class="input-field" placeholder="Mật Khẩu Của Bạn" required><br>
+                <input type="checkbox" class="check-box"><span>Nhớ Mật Khẩu</span><br>
+                <button type="submit" class="submit-btn">Đăng Nhập</button>
+             
+            </form>
+
+            <!-- Form đăng ký -->
+            <form id="registerForm" class="input-group" style="display: none;">
+                <h2>Đăng Ký</h2>
+                <input type="text" class="input-field" placeholder="Tên Của Bạn" required><br>
+                <input type="tel" class="input-field" placeholder="Số Điện Thoại" required><br>
+                <input type="email" class="input-field" placeholder="Email Của Bạn" required><br>
+                <input type="text" class="input-field" placeholder="Địa Chỉ Của Bạn" required><br>
+                <input type="password" class="input-field" id="password" placeholder="Mật Khẩu Của Bạn" required><br>
+                <input type="password" class="input-field" id="confirm-password" placeholder="Nhập Lại Mật Khẩu Của Bạn" required><br>
+                <input type="checkbox" class="check-box"><span>Tôi đồng ý với các điều khoản và điều kiện</span><br>
+                <button type="submit" class="submit-btn">Đăng Ký</button>
+             
+             
+            </form>
+
+            <!-- Nút chuyển đổi -->
+           
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Lấy các phần tử form và nút
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+
+        // Hàm chuyển đổi hiển thị form
+        function showRegisterForm() {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        }
+
+        function showLoginForm() {
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        }
+
+        // Kiểm tra mật khẩu khớp khi đăng ký
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+
+        registerForm.addEventListener('submit', (event) => {
+            if (passwordField.value !== confirmPasswordField.value) {
+                alert('Mật khẩu không khớp! Vui lòng nhập lại.');
+                event.preventDefault(); // Ngăn form gửi dữ liệu nếu có lỗi
+            }
+        });
+    </script>
+</body>
+</html>
