@@ -61,7 +61,8 @@ body {
 }
 
 .search-section {
-    background-image: url('./header-bg.webp');
+    /* background-image: url('./header-bg.webp'); */
+    background-image: url('./anh.png');
     background-size: cover;
     background-position: center center;
     padding: 25px;
@@ -130,6 +131,7 @@ width: 700px;
     cursor: pointer;
 }
 
+ 
 
 /* Danh sách các mục dưới thanh tìm kiếm */
 .danhmuc{
@@ -198,6 +200,8 @@ width: 700px;
 .fa-angle-right {
   font-size: 16px; /* Kích thước icon */
 }
+
+
 
 /* notenote */
 .main-content {
