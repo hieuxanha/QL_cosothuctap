@@ -7,7 +7,10 @@
     <title>TopCV</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="giaodien_chinh.css">
+
+    
+    <link rel="stylesheet" href="/giaodien_chinh2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         /* style.css */
 
@@ -20,46 +23,31 @@
             z-index: 2;
             /* Đảm bảo nội dung hiển thị trên hiệu ứng tuyết */
         }
-
-        canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            /* Canvas nằm dưới nội dung */
+        .danhmuc_1 {
+          position: relative;
         }
 
+ .danhmuc_1_option {
 
-    /*  nháp*/
+  /* position: relative; */
+ }
 
-
-  
-/* Danh sách các mục dưới thanh tìm kiếm */
-.duoitimkiem {
-    display: flex;
-    justify-content: center;
-    padding: 5px 0;
-}
-
-.cacmuc {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Hiển thị 5 mục ngang */
-    gap: 20px;
-}
-
-.cacmuc_1 {
-    background-color: #fff; /* Màu nền xanh đậm */
-    height: 50px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.cacmuc_1:hover {
-    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
-}
+  .danhmuc_1_option:hover .danhmuc_1_option_child{
+          background-color: #fff;
+           display: block;
+  }
+  .danhmuc_1_option_child {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    left: calc(100%);
+    top: 0;
+    width: 539px;
+    height: 259px;
+    /* margin-left: 15px; */
+    border-radius: 15px;
+  }
     </style>
 </head>
 
@@ -73,35 +61,75 @@
 
 
         <div class="nav">
-            <a href="#">Việc làm </a>
-            <a href="#">Hồ sơ &amp; CV</a>
-            <a href="#">Công cụ</a>
-            <a href="#">Cẩm nang nghề nghiệp</a>
-            <a href="#">TopCV Pro </a>
+            <a href="#">Quản lý sinh viên</a>
+            <a href="#">Quản lý giảng viên</a>
+            <a href="#">Quản lý đơn vị thực tập</a>
+            <!-- <a href="#">Cẩm nang nghề nghiệp</a>
+            <a href="#">TopCV Pro </a> -->
             <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
             <a class="btn" href="#">Đăng ký</a>
-            <a class="btn btn-secondary" href="#">Đăng tuyển &amp; tìm hồ sơ </a>
+            <a class="" href="#"><i class="fa-solid fa-user"></i> </a>
         </div>
     </div>
 
 
 
 
-
+<!-- #b3b8bd -->
 
     <div class="search-section">
         <h1>Tìm cơ sở thực tập cho sinh viên Trường Đại Học Tài Nguyên Môi Trường Hà Nội </h1>
-        <p>Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+        <p style="margin-left: 5%;">Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
 
         <div class="search-bar">
             <input placeholder="Tất cả tỉnh/thành phố" type="text" />
+           
             <button>Tìm kiếm</button>
+        </div>
+        <div class="danhmuc">
+             <div class="danhmuc_1">
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                          <div class="danhmuc_1_option_child">abc</div>
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                  <div class="danhmuc_1_option_child">a123443bc</div>
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                 </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                </div>
+                <div class="danhmuc_1_heder">
+                    <div class="danhmuc_1_heder-pag">
+                      <div class="danhmuc_1_heder-text">1/4</div>
+                      <div class="danhmuc_1_heder-action">
+    
+                        
+                      </div>
+                    </div>
+                  
+               </div>
+             </div>
+
+             <!-- <div class="danhmuc_1_heder">
+                  <div class="danhmuc_1_heder-pag">
+                    <div class="danhmuc_1_heder-text">1/4</div>
+                    <div class="danhmuc_1_heder-action">
+  
+                      
+                    </div>
+                  </div>
+                
+             </div> -->
+           
         </div>
       
        
         
       
     </div>
+
     <div class="main-content">
       
 
@@ -382,65 +410,7 @@
 
     <!-- <canvas id="snowCanvas"> </canvas> -->
 
-    <script>
-        // snow.js
-        const canvas = document.getElementById("snowCanvas");
-        const ctx = canvas.getContext("2d");
-
-        // Kích thước canvas bằng kích thước của cửa sổ
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Tạo bông tuyết
-        const numFlakes = 100;
-        const flakes = [];
-
-        for (let i = 0; i < numFlakes; i++) {
-            flakes.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.random() * 3 + 1, // Kích thước bông tuyết
-                speedY: Math.random() * 3 + 1, // Tốc độ rơi
-                speedX: Math.random() * 1 - 0.5 // Lắc lư trái phải
-            });
-        }
-
-        // Vẽ và tạo hiệu ứng
-        function drawSnowflakes() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "pink";
-            ctx.beginPath();
-
-            flakes.forEach(flake => {
-                ctx.moveTo(flake.x, flake.y);
-                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-            });
-
-            ctx.fill();
-            updateSnowflakes();
-        }
-
-        function updateSnowflakes() {
-            flakes.forEach(flake => {
-                flake.y += flake.speedY;
-                flake.x += flake.speedX;
-
-                // Nếu bông tuyết rơi hết màn hình, đưa nó về đầu
-                if (flake.y > canvas.height) flake.y = 0;
-                if (flake.x > canvas.width) flake.x = 0;
-                if (flake.x < 0) flake.x = canvas.width;
-            });
-        }
-
-        // Cập nhật và vẽ liên tục
-        function animate() {
-            drawSnowflakes();
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-
-    </script>
+   
 </body>
 
 </html>
