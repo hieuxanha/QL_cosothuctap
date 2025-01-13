@@ -7,6 +7,8 @@
     <title>TopCV</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+
+
     <link rel="stylesheet" href="giaodien_chinh2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
@@ -21,11 +23,31 @@
             z-index: 2;
             /* Đảm bảo nội dung hiển thị trên hiệu ứng tuyết */
         }
+        .danhmuc_1 {
+          position: relative;
+        }
 
- 
+ .danhmuc_1_option {
 
+  /* position: relative; */
+ }
 
-
+  .danhmuc_1_option:hover .danhmuc_1_option_child{
+          background-color: #fff;
+           display: block;
+  }
+  .danhmuc_1_option_child {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    position: absolute;
+    left: calc(100%);
+    top: 0;
+    width: 539px;
+    height: 259px;
+    /* margin-left: 15px; */
+    border-radius: 15px;
+  }
     </style>
 </head>
 
@@ -36,28 +58,37 @@
                 src="/logo.png"
                 width="100%" />
         </div>
+        
+        <div>
+          
+        </div>
 
 
         <div class="nav">
             <a href="#">Việc làm </a>
             <a href="#">Hồ sơ &amp; CV</a>
-            <a href="#">Công cụ</a>
+          
             <a href="#">Cẩm nang nghề nghiệp</a>
-            <a href="#">TopCV Pro </a>
+           
             <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
             <a class="btn" href="#">Đăng ký</a>
-            <a class="btn btn-secondary" href="#">Đăng tuyển &amp; tìm hồ sơ </a>
+            <a class="" href="#"><i class="fa-solid fa-user"></i> </a>
         </div>
     </div>
 
 
 
 
-
+<!-- #b3b8bd -->
 
     <div class="search-section">
+<<<<<<< HEAD
         <h1>TÌM CƠ SỞ THỰC TẬP CHO SINH VIÊN TRƯỜNG ĐẠI HỌC TÀI NGUYÊN VÀ MÔI TRƯỜNG HÀ NỘI</h1>
         <p>Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+=======
+        <h1>Tìm cơ sở thực tập cho sinh viên Trường Đại Học Tài Nguyên Môi Trường Hà Nội </h1>
+        <p style="margin-left: 5%;">Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+>>>>>>> c31c1958c228aac966797531ba4b5b778f752e5a
 
         <div class="search-bar">
             <input placeholder="Tất cả tỉnh/thành phố" type="text" />
@@ -66,11 +97,18 @@
         </div>
         <div class="danhmuc">
              <div class="danhmuc_1">
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                          <div class="danhmuc_1_option_child">abc</div>
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                  <div class="danhmuc_1_option_child">a123443bc</div>
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                 </div>
+                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                </div>
                 <div class="danhmuc_1_heder">
                     <div class="danhmuc_1_heder-pag">
                       <div class="danhmuc_1_heder-text">1/4</div>
