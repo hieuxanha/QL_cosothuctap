@@ -106,6 +106,7 @@ body {
     display: inline;
     justify-content: center;
     gap: 10px;
+    margin-left: 250px;
 }
 
 .search-bar select,
