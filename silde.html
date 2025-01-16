@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <style>
+        .featured-industries {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.featured-industries h2 {
+    font-size: 24px;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.featured-industries p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.featured-industries a {
+    color: #27ae60;
+    text-decoration: none;
+}
+
+.featured-industries a:hover {
+    text-decoration: underline;
+}
+
+/* Slider container */
+.industries-grid {
+    display: flex;
+    overflow: hidden;
+     /* Ẩn các mục tràn ra ngoài */
+     margin: 0 auto; /* Căn giữa slider */
+     width: 1000px; /* Chiều rộng cố định */
+        max-width: 100%; /* Chiều rộng tối đa */
+     
+}
+
+.industry-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column; /* Sắp xếp nội dung theo chiều dọc */
+    align-items: center; /* Căn giữa theo trục ngang */
+    justify-content: space-between; /* Căn đều giữa các thành phần */
+    min-height: 180px; /* Chiều cao tối thiểu */
+    height: auto; /* Cho phép tự động giãn theo nội dung */
+}
+
+.industry-card img {
+    width: 50px;
+    
+    margin: 0 auto;
+}
+.industry-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0; /* Khoảng cách đều */
+}
+
+.industry-card p {
+    font-size: 14px;
+    color: #27ae60;
+    margin: 0;
+}
+
+
+/* Nút điều hướng */
+.slick-prev, .slick-next {
+  background-color: #9d9796 !important; /* Màu nền mới */
+  color: white !important;             /* Màu chữ */
+  border-radius: 50%;                  /* Bo tròn */
+  width: 20px;                         /* Chiều rộng */
+  height: 40px;                        /* Chiều cao */
+  z-index: 100;      
+                    /* Hiển thị trên các phần khác */
+}
+
+/* Khi hover vào nút */
+.slick-prev:hover, .slick-next:hover {
+  background-color: #c0392b !important; /* Màu nền khi hover */
+}
+
+/* Dấu chấm pagination */
+.slick-dots li button:before {
+  color: #27ae60 !important; /* Màu của dấu chấm */
+  font-size: 12px;           /* Kích thước dấu chấm */
+}
+
+/* Dấu chấm đang được chọn */
+.slick-dots li.slick-active button:before {
+  color: #1e8449 !important; /* Màu của dấu chấm được chọn */
+}
+
+/* Khoảng cách giữa các slide */
+.slick-slide {
+  margin: 0 10px; /* Khoảng cách hai bên mỗi slide */
+}
+
+/* Slide hiển thị */
+.slick-slide > div {
+  background: #f4f4f4; /* Màu nền của slide */
+  border-radius: 8px;  /* Bo góc */
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Khi hover vào slide */
+.slick-slide > div:hover {
+  transform: scale(1.05);  /* Phóng to slide khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="featured-industries">
+        <h2>Top ngành nghề nổi bật</h2>
+        <p>Bạn muốn tìm việc mới? Xem danh sách việc làm <a href="#">tại đây</a></p>
+        <div class="industries-grid responsive" style="">
+          <div class="industry-card">
+            <img src="icon-sales.png" alt="Kinh doanh - Bán hàng">
+            <h3>Khoa Kinh Tế</h3>
+            <p>8.673 việc làm</p>
+          </div>
+  
+          <div class="industry-card">
+            <img src="icon-marketing.png" alt="Marketing - PR - Quảng cáo">
+            <h3>Khoa Môi Trường</h3>
+            <p>4.985 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-customer-service.png" alt="Chăm sóc khách hàng">
+            <h3>Khoa Quản lý đất đai</h3>
+            <p>1.796 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-hr.png" alt="Nhân sự - Hành chính">
+            <h3>Khoa Khí tượng thủy văn</h3>
+            <p>2.855 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+            <h3>Khoa địa trắc</h3>
+            <p>818 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-it.png" alt="Công nghệ Thông tin">
+            <h3>Khoa Dịa chất</h3>
+            <p>3.641 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-real-estate.png" alt="Bất động sản - Xây dựng">
+            <h3>Khoa Tài nguyên nước</h3>
+            <p>1.484 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Khoa Công nghệ thông tin</h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Khoa lý luận chính trị</h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Khoa Khoa học và Hải đảo </h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Khoa học Đại Cương<h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Khoa Giáo dục thể chất Và dục Quốc phòng</h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Bộ mộn luật</h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Bộ môn Biến đổi khí hậu và PT bền vững</h3>
+            <p>2.814 việc làm</p>
+          </div>
+          <div class="industry-card">
+            <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
+            <h3>Bộ môn Ngoại ngữ</h3>
+            <p>2.814 việc làm</p>
+          </div>
+        </div>
+      </section>
+    
+      
+
+      <script>
+
+        $(document).ready(function(){
+    $('.industries-grid').slick({
+        slidesToShow: 4, /* Số item hiển thị */
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: true, /* Hiển thị các dấu chấm */
+        arrows: true, /* Hiển thị nút điều hướng */
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});
+
+      </script>
+
+</body>
+</html>

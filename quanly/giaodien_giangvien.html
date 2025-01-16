@@ -21,7 +21,13 @@
 
 
     <style>
-  
+        /* style.css */
+
+
+
+      
+
+
 
 /* Slide-Show */
 .slider-container {
@@ -101,12 +107,31 @@
 
 
 
+.featured-industries {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
 
+.featured-industries h2 {
+    font-size: 24px;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
 
+.featured-industries p {
+    color: #555;
+    margin-bottom: 30px;
+}
 
+.featured-industries a {
+    color: #27ae60;
+    text-decoration: none;
+}
 
-
-
+.featured-industries a:hover {
+    text-decoration: underline;
+}
 
 /* Slider container */
 .industries-grid {
@@ -136,35 +161,94 @@
     height: auto; /* Cho phép tự động giãn theo nội dung */
 }
 
+.industry-card img {
+    width: 50px;
+    
+    margin: 0 auto;
+}
+.industry-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0; /* Khoảng cách đều */
+}
+
+.industry-card p {
+    font-size: 14px;
+    color: #27ae60;
+    margin: 0;
+}
 
 
 /* Nút điều hướng */
+.slick-prev, .slick-next {
+  background-color: #9d9796 !important; /* Màu nền mới */
+  color: white !important;             /* Màu chữ */
+  border-radius: 50%;                  /* Bo tròn */
+  width: 20px;                         /* Chiều rộng */
+  height: 40px;                        /* Chiều cao */
+  z-index: 100;      
+                    /* Hiển thị trên các phần khác */
+}
 
+/* Khi hover vào nút */
+.slick-prev:hover, .slick-next:hover {
+  background-color: #c0392b !important; /* Màu nền khi hover */
+}
+
+/* Dấu chấm pagination */
+.slick-dots li button:before {
+  color: #27ae60 !important; /* Màu của dấu chấm */
+  font-size: 12px;           /* Kích thước dấu chấm */
+}
+
+/* Dấu chấm đang được chọn */
+.slick-dots li.slick-active button:before {
+  color: #1e8449 !important; /* Màu của dấu chấm được chọn */
+}
+
+/* Khoảng cách giữa các slide */
+.slick-slide {
+  margin: 0 10px; /* Khoảng cách hai bên mỗi slide */
+}
+
+/* Slide hiển thị */
+.slick-slide > div {
+  background: #f4f4f4; /* Màu nền của slide */
+  border-radius: 8px;  /* Bo góc */
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Khi hover vào slide */
+.slick-slide > div:hover {
+  transform: scale(1.05);  /* Phóng to slide khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
      
     </style>
 </head>
 
 <body>
-  <div class="header">
-    <div class="left-section">
-        <div class="logo">
-            <img alt="TopCV Logo" height="40" src="/logo.png" width="100%" />
+    <div class="header">
+        <div class="left-section">
+            <div class="logo">
+                <img alt="TopCV Logo" height="40" src="/logo.png" width="100%" />
+            </div>
+            <div class="ten_trg">
+                <h3>ĐẠI HỌC TRƯỜNG NGUYÊN MÔI TRƯỜNG HÀ NỘI</h3>
+                <p>Hanoi University of Natural Resources and Environment</p>
+            </div>
         </div>
-        <div class="ten_trg">
-            <h3>ĐẠI HỌC TRƯỜNG NGUYÊN MÔI TRƯỜNG HÀ NỘI</h3>
-            <p>Hanoi University of Natural Resources and Environment</p>
-        </div>
-    </div>
-    <div class="nav">
-      <a href="../quanly/giaodien1_ql.html">Quản lý sinh viên</a>
-      <a href="#">Quản lý giảng viên</a>
-      <a href="#">Quản lý đơn vị thực tập</a>
-        <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
-        <a class="btn" href="#">Đăng ký</a>
-        <a href="#"><i class="fa-solid fa-user"></i></a>
-    </div>
-</div>
 
+
+        <div class="nav">
+            <!-- <a href="#">Việc làm </a>
+            <a href="#">Hồ sơ &amp; CV</a> -->
+            <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
+            <a class="btn" href="#">Đăng ký</a>
+            <a class="" href="#"><i class="fa-solid fa-user"></i> </a>
+        </div>
+    </div>
 
 
 
@@ -187,16 +271,16 @@
                           <div class="danhmuc_1_option_child">abc</div>
                 </div>
                 <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
+                  <div class="danhmuc_1_option_child">123456</div>
                 </div>
                 <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
+                  <div class="danhmuc_1_option_child">a123412343bc</div>
                 </div>
                 <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
-                  <div class="danhmuc_1_option_child">a123443bc</div>
+                  <div class="danhmuc_1_option_child">a12344123213bc</div>
                  </div>
                 <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
+                  <div class="danhmuc_1_option_child">a12342132143bc</div>
                 </div>
 
                 <div class="danhmuc_1_heder">
@@ -207,8 +291,12 @@
                         
                       </div>
                     </div>
+                  
                </div>
-             </div>       
+             </div>
+
+           
+           
         </div>
       
     </div>
@@ -239,6 +327,8 @@
                     <div class="tag">Miền Bắc</div>
                     <div class="tag">Miền Nam</div>
                 </div>
+
+
             </div>
 
 

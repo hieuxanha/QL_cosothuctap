@@ -23,53 +23,68 @@ body {
   width: 100%;
   z-index: 3;
 }
-
 .header {
-    background-color: #fff;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between; /* Logo + tiêu đề ở một bên, menu ở một bên */
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
 
-
+.header .left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa logo và tiêu đề */
 }
 
 .header .logo img {
-    height: 70px;
+  height: 70px;
+}
+
+.header .ten_trg {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.header .ten_trg h3,
+.header .ten_trg p {
+  margin: 0;
 }
 
 .header .nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .header .nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 .header .nav .btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 
 .header .nav .btn-secondary {
-    background-color: #343a40;
+  background-color: #343a40;
 }
 
-
+/* Vùng tìm kiếm */
 .search-section {
-  position: relative; /* Để định vị pseudo-element */
+  position: relative;
   padding: 25px;
+  text-align: center;
+  background: none;
   color: #fff;
-  height: 45%;
-  background: none; /* Xóa trực tiếp ảnh nền khỏi thẻ */
-  overflow: hidden; /* Đảm bảo lớp phủ không tràn ra ngoài */
+  height: 55%;
+  overflow: hidden;
 }
 
 .search-section::before {
@@ -79,69 +94,61 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./trg.png'); /* Ảnh nền */
-  background-size: cover;
-  background-position: center center;
-  filter: blur(5px); /* Làm mờ ảnh nền */
-  z-index: -1; /* Đưa pseudo-element ra sau nội dung */
-  opacity: 1; /* Điều chỉnh độ mờ (nếu cần) */
+  background: url('./trg.png') center/cover no-repeat;
+  filter: blur(5px);
+  z-index: -1;
 }
 
-
-
 .search-section h1 {
-    margin: 0;
-    font-size: 30px;
-    font-weight: 700;
-    color: #060606;
+  font-size: 36px;
+  font-weight: bold;
+  color: #060606;
+  margin: 0 0 10px;
 }
 
 .search-section p {
-    margin: 5px 0 20px;
-    font-size: 19px;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
-
-
 
 .search-bar {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-
-   
-    display: inline;
-    justify-content: center;
-    gap: 10px;
-    /* margin-left: 72px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px 20px;
+  max-width: 54%;
+  margin: 0 auto 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 10px;
 }
 
-.search-bar select,
-.search-bar input,
-.search-bar button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.search-bar select,
 .search-bar input {
-    width: 200px;
-}
-
-.search-bar input{
-
-/* width: 700px; */
-width: 41%;
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .search-bar button {
-    background-color: #28a745;
-    color: #fff;
-    cursor: pointer;
+  width: 10%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
- 
+.search-bar button:hover {
+  background-color: #218838;
+}
 
+/* Danh mục */
 /* Danh sách các mục dưới thanh tìm kiếm */
 .danhmuc{
   background: #fff;
@@ -149,10 +156,10 @@ width: 41%;
   border-right: 1px solid #ececec;
   /* display: flex; */
   margin-top: 25px;
-  /* margin-left: 26%; */
+  margin-left: 22%;
   /* flex-direction: column; */
-  height: 280px;
-  width: 250px;
+  height: 298px;
+  width: 270px;
   
 }
 
@@ -167,7 +174,7 @@ width: 41%;
 }
 
 .danhmuc_1_option{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 350;
         color: #263a4d;
         padding: 15px;
@@ -175,6 +182,29 @@ width: 41%;
 
 }
 
+.danhmuc_1 {
+  position: relative;
+}
+
+
+.danhmuc_1_option:hover .danhmuc_1_option_child{
+  background-color: #fff;
+   display: block;
+}
+
+
+.danhmuc_1_option_child {
+display: none;
+background-color: #fff;
+padding: 10px;
+position: absolute;
+left: calc(100%);
+top: 0;
+width: 650px;
+height: 278px;
+/* margin-left: 15px; */
+border-radius: 15px;
+}
 
 
 .danhmuc_1_heder{
@@ -183,7 +213,7 @@ width: 41%;
   /* display: flex; */
   /* height: 30px; */
   justify-content: flex-end;
-  padding: 10px 14px 8px 21px;
+  padding: 14px 14px 8px 21px;
 }
 
 .danhmuc_1_heder-pag{
@@ -209,6 +239,8 @@ width: 41%;
 .fa-angle-right {
   font-size: 16px; /* Kích thước icon */
 }
+
+
 
 
 
@@ -343,7 +375,7 @@ width: 41%;
   display: flex;
   flex-wrap: wrap; /* Để hiển thị theo hàng */
   gap: 16px; /* Khoảng cách giữa các box */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .job {
@@ -433,30 +465,21 @@ width: 41%;
   .featured-industries a:hover {
     text-decoration: underline;
   }
+
+ 
   
   .industries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     justify-items: center;
-
-
+    overflow: hidden;
+    margin: 0 auto;
   }
-  
-  .industry-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    /* padding: 20px; */
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+
   
+ 
   .industry-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -464,20 +487,78 @@ width: 41%;
   
   .industry-card img {
     width: 50px;
-    margin-bottom: 15px;
-  }
+    
+    margin: 0 auto;
+}
   
+.industry-card p {
+  font-size: 14px;
+  color: #27ae60;
+  margin: 0;
+}
+
   .industry-card h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
   }
+
+
   
-  .industry-card p {
-    font-size: 14px;
-    color: #27ae60;
-    margin: 0;
-  }
+  
+/* Nút điều hướng */
+.slick-prev, .slick-next {
+  background-color: #9d9796 !important; /* Màu nền mới */
+  color: white !important;             /* Màu chữ */
+  border-radius: 50%;                  /* Bo tròn */
+  width: 20px;                         /* Chiều rộng */
+  height: 40px;                        /* Chiều cao */
+  z-index: 100;      
+                    /* Hiển thị trên các phần khác */
+}
+
+/* Khi hover vào nút */
+.slick-prev:hover, .slick-next:hover {
+  background-color: #c0392b !important; /* Màu nền khi hover */
+}
+
+/* Dấu chấm pagination */
+.slick-dots li button:before {
+  color: #27ae60 !important; /* Màu của dấu chấm */
+  font-size: 12px;           /* Kích thước dấu chấm */
+}
+
+/* Dấu chấm đang được chọn */
+.slick-dots li.slick-active button:before {
+  color: #1e8449 !important; /* Màu của dấu chấm được chọn */
+}
+
+/* Khoảng cách giữa các slide */
+.slick-slide {
+  margin: 0 10px; /* Khoảng cách hai bên mỗi slide */
+}
+
+/* Slide hiển thị */
+.slick-slide > div {
+  background: #f4f4f4; /* Màu nền của slide */
+  border-radius: 8px;  /* Bo góc */
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Khi hover vào slide */
+.slick-slide > div:hover {
+  transform: scale(1.05);  /* Phóng to slide khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+
+
+
+
+
+
+
+
   
 
 /*end  footer */
