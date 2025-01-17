@@ -96,6 +96,7 @@ body {
   color: #fff;
   height: 55%;
   overflow: hidden;
+  
 }
 
 .search-section::before {
@@ -128,9 +129,10 @@ body {
   align-items: center;
   background-color: #fff;
   border-radius: 20px;
+  margin-bottom: 50px;
   padding: 15px 20px;
   max-width: 54%;
-  margin: 0 auto 25px;
+  margin: 25px auto 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   gap: 10px;
 }
