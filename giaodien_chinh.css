@@ -63,7 +63,18 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  font-size: 19px;
+  
+
 }
+.header .nav a:hover {
+  text-decoration: none;
+  color: #20e74f;
+  
+  
+
+}
+
 
 .header .nav .btn {
   background-color: #28a745;
@@ -145,7 +156,7 @@ body {
 }
 
 .search-bar button:hover {
-  background-color: #218838;
+  background-color: #28a745;
 }
 
 /* Danh mục */
