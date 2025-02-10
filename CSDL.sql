@@ -52,3 +52,9 @@ CREATE TABLE bao_cao_thuc_tap (
     ngay_gui DATE,
     FOREIGN KEY (ma_dang_ky) REFERENCES dang_ky_thuc_tap(ma_dang_ky)
 );
+
+
+admin: quản lý sv, quản lý gv, quản lý đv thực tập
+gv: quản lý sinh viên (trong quản lý sv có thể sẽ có thêm những option khác kiểu như: xem thông tin, xem quá trình đánh giá thực tập, cập nhật điểm)
+t đang phân vân ko biết nên gói nó lại trong qly sinh viên của gv hay tách ra cho nó rõ ràng, với cả khác cái chức năng quản lý sv của admin cho đỡ lẫn
+đv thực tập: cập nhật thông tin, đánh giá nhận xét sinh, xét duyệt hồ sơ

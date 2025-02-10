@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TopCV</title>
+    <title>Ql_csthcsth</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
 
@@ -21,110 +21,15 @@
 
 
     <style>
-  
+        /* style.css */
 
-/* Slide-Show */
-.slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-}
-
-.slider {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.slides {
-  display: flex;
-  transition: transform 3s ease;
-}
-
-.slides img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.slider-container button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1;
-  border-radius: 10px;
-
-  opacity: 0;
-}
-
-.slider-container:hover .prev,
-.slider-container:hover .next {
-  opacity: 1;
-}
-
-.prev {
-  left: 10px;
-}
-
-.next {
-  right: 10px;
-}
-
-.dots {
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: white;
-}
-/* Slide-Show */
-
-
-
-
-
-
-
-
-
-
-/* Slider container */
-.industries-grid {
-    display: flex;
-    overflow: hidden;
-     /* Ẩn các mục tràn ra ngoài */
-     margin: 0 auto; /* Căn giữa slider */
-     width: 1000px; /* Chiều rộng cố định */
-        max-width: 100%; /* Chiều rộng tối đa */
-     
-}
 
 .industry-card {
     background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
     margin: 0 10px;
@@ -137,10 +42,14 @@
 }
 
 
+.industry-card img {
+  margin-bottom: 40px; /* Tạo khoảng cách giữa ảnh và nhóm văn bản */
+}
 
-/* Nút điều hướng */
-
-     
+.text-group h3 a:hover {
+  text-decoration: none; 
+}
+ 
     </style>
 </head>
 
@@ -156,11 +65,13 @@
         </div>
     </div>
     <div class="nav">
-      <a href="../quanly/giaodien1_ql.html">Quản lý sinh viên</a>
+      <a href="#">Quản lý sinh viên</a>
       <a href="#">Quản lý giảng viên</a>
-      <a href="#">Quản lý đơn vị thực tập</a>
-        <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
-        <a class="btn" href="#">Đăng ký</a>
+      <a href="">Quản lý đv Thực Tập</a>
+        
+
+        <a class="btn" href="./form_dn.html">Đăng nhập</a>
+        <a class="btn" href="./form_dk.html">Đăng ký</a>
         <a href="#"><i class="fa-solid fa-user"></i></a>
     </div>
 </div>
@@ -171,54 +82,60 @@
 
 <!-- #b3b8bd -->
 
-    <div class="search-section">
-        <h1>Tìm cơ sở thực tập cho sinh viên Trường Đại Học Tài nguyên và Môi trường Hà Nội </h1>
-        <p style="margin-left: 5%;">Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+<div class="search-section">
+   <div class="search-section1">
+    <h1>Tìm cơ sở thực tập cho sinh viên Trường Đại Học Tài nguyên và Môi trường Hà Nội</h1>
+    <p>Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+   </div>
 
-        <div class="search-bar">
-            <input placeholder="Tất cả Tỉnh/ Thành phố" type="text" />
-           
-            <button>Tìm kiếm</button>
-        </div>
+ <div class="aa">
+      <div class="search-bar">
+          <input type="text" placeholder="Tất cả Tỉnh/Thành phố" />
+          <button>Tìm kiếm</button>
+      </div>
 
-        <div class="danhmuc">
-             <div class="danhmuc_1">
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
-                          <div class="danhmuc_1_option_child">abc</div>
-                </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
-                </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
-                </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
-                  <div class="danhmuc_1_option_child">a123443bc</div>
-                 </div>
-                <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
-                  <div class="danhmuc_1_option_child">a123443bc</div>
-                </div>
-
-                <div class="danhmuc_1_heder">
+       <div class="danhmuc">
+         <div class="danhmuc_1">
+            <div class="danhmuc_1_option">Cong nghe thong t`in <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                 <div class="danhmuc_1_option_child">abc</div>
+            </div>
+            <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                 <div class="danhmuc_1_option_child">a123443bc</div>
+            </div>
+            <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                 <div class="danhmuc_1_option_child">a123443bc</div>
+           </div>
+           <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a>
+                 <div class="danhmuc_1_option_child">a123443bc</div>
+           </div>
+           <!-- <div class="danhmuc_1_option">Cong nghe thong tin <a class="cach" href=""><i class="fa-solid fa-angle-right"></i></a> 
+                 <div class="danhmuc_1_option_child">a123443bc</div>
+          </div> -->
+                  <div class="danhmuc_1_heder">
                     <div class="danhmuc_1_heder-pag">
                       <div class="danhmuc_1_heder-text">1/4</div>
-                      <div class="danhmuc_1_heder-action">
-    
-                        
-                      </div>
+                       <div class="danhmuc_1_heder-action">
+  
+            
+                       </div>
                     </div>
-               </div>
-             </div>       
+                  </div>
+           </div>
+
+           <div class="a">
+            <div>
+                 <img src="./img/469877645_1005404278278078_3153280250481528893_n.jpg" alt="">
+            </div>
+           </div>
+
         </div>
       
-    </div>
+   </div>
+  </div>
+</div>
+
 
     <div class="main-content">
-      
-
-
-
-
         <div class="job-list">
             <h2>Việc làm tốt nhất</h2>
             <div class="filter">
@@ -320,93 +237,93 @@
                 </div>
             </div>
             
-
-
-
-
         </div>
     </div>
-
+<!-- a4 -->
     <section class="featured-industries">
       <h2>Các Khoa và bộ môn</h2>
       <p>Bạn muốn tìm việc mới? Xem danh sách việc làm <a href="#">tại đây</a></p>
       <div class="industries-grid responsive">
         <div class="industry-card">
-          <img src="icon-sales.png" alt="Kinh doanh - Bán hàng">
-          <h3>Khoa Kinh Tế</h3>
-          <p>8.673 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Kinh Tế</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
-
+        
         <div class="industry-card">
-          <img src="icon-marketing.png" alt="Marketing - PR - Quảng cáo">
-          <h3>Khoa Môi Trường</h3>
-          <p>4.985 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Môi Trường </a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
+        
         <div class="industry-card">
-          <img src="icon-customer-service.png" alt="Chăm sóc khách hàng">
-          <h3>Khoa Quản lý đất đai</h3>
-          <p>1.796 việc làm</p>
-        </div>
-        <div class="industry-card">
-          <img src="icon-hr.png" alt="Nhân sự - Hành chính">
-          <h3>Khoa Khí tượng thủy văn</h3>
-          <p>2.855 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Quản lý đất đai</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
           <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
-          <h3>Khoa địa trắc</h3>
-          <p>818 việc làm</p>
+          <div class="text-group">
+            <h3><a href="">Khoa khí tượng thủy văn</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-it.png" alt="Công nghệ Thông tin">
-          <h3>Khoa Dịa chất</h3>
-          <p>3.641 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Trắc địa bản đồ và Thông tin địa lý</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-real-estate.png" alt="Bất động sản - Xây dựng">
-          <h3>Khoa Tài nguyên nước</h3>
-          <p>1.484 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Địa chất</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Khoa Công nghệ thông tin</h3>
-          <p>2.814 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Tài nguyên nước</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Khoa lý luận chính trị</h3>
-          <p>2.814 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Công nghệ thông tin</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Khoa Khoa học và Hải đảo </h3>
-          <p>2.814 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Lý luận chính trị</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Khoa học Đại Cương<h3>
-          <p>2.814 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Khoa học biển vè Hải đảo</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
         <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Khoa Giáo dục thể chất Và dục Quốc phòng</h3>
-          <p>2.814 việc làm</p>
+          <img src="icon-finance.png" alt="Tài chính - Ngân hàng">
+          <div class="text-group">
+            <h3><a href="">Khoa Khoa học Đại cương</a></h3>       
+            <p>818 việc làm</p>
+          </div>
         </div>
-        <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Bộ mộn luật</h3>
-          <p>2.814 việc làm</p>
-        </div>
-        <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Bộ môn Biến đổi khí hậu và PT bền vững</h3>
-          <p>2.814 việc làm</p>
-        </div>
-        <div class="industry-card">
-          <img src="icon-accounting.png" alt="Kế toán - Kiểm toán">
-          <h3>Bộ môn Ngoại ngữ</h3>
-          <p>2.814 việc làm</p>
-        </div>
+       
       </div>
     </section>
 
@@ -420,8 +337,8 @@
           <div class="slides">
               <img class="hoo" src="/anh.png" alt="Image 1" />
               <img class="hoo" src="/trg.png" alt="Image 2" />
-              <img class="hoo" src="/logo.png" alt="Image 3" />
-              <img class="hoo" src="/trg.png" alt="Image 4" />
+              <img class="hoo" src="/header-bg.webp" alt="Image 3" />
+              <img class="hoo" src="./img/469877645_1005404278278078_3153280250481528893_n.jpg" alt="Image 4" />
           </div>
       </div>
 
@@ -442,20 +359,20 @@
           <div class="footer-section">
             <img src="logo.png" alt="TopCV Logo" class="footer-logo" />
             <p>Tiếp lợi thế - Nối thành công</p>
-            <img src="google-startups.png" alt="Google for Startups" />
+            <img src="./img/google_for_startup.webp" alt="Google for Startups" />
             <p>Liên hệ</p>
             <p>Hotline: <a href="tel:02466805958">(024) 6680 5958</a> (Giờ hành chính)</p>
             <p>Email: <a href="mailto:hotro@topcv.vn">hotro@topcv.vn</a></p>
             <p>Ứng dụng tải xuống</p>
             <div class="app-links">
-              <img src="app-store.png" alt="App Store" />
-              <img src="google-play.png" alt="Google Play" />
+              <img src="./img/app_store.webp" alt="App Store" />
+              <img src="./img/chplay.webp" alt="Google Play" />
             </div>
             <div class="social-icons">
-              <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-              <a href="#"><img src="youtube-icon.png" alt="YouTube" /></a>
-              <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
-              <a href="#"><img src="tiktok-icon.png" alt="TikTok" /></a>
+              <a href="#"><img src="./img/facebook.webp" alt="Facebook" /></a>
+              <a href="#"><img src="./img/youtube.webp" alt="YouTube" /></a>
+              <a href="#"><img src="./img/linkedin.webp" alt="LinkedIn" /></a>
+              <a href="#"><img src="./img/tiktok.webp" alt="TikTok" /></a>
             </div>
           </div>
           <div class="footer-section">
@@ -534,12 +451,9 @@
     });
 });
 
-
-
-
 </script>
 
-   <script src="../js/giaodienchinh.js" ></script>
+   <script src="./js/giaodienchinh.js" ></script>
   <!-- của slide -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 

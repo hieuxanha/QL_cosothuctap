@@ -4,200 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bố cục giống TopCV</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/chi_tiet_khoa.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
 
 
-.header {
-    background-color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
-}
 
-.header .logo img {
-    height: 40px;
-}
-
-.header .nav {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.header .nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.header .nav .btn {
-    background-color: #28a745;
-    color: #fff;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-
-.header .nav .btn-secondary {
-    background-color: #343a40;
-}
-
-
-    /* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-.search-button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  background-color: #218838;
-}
-
-/* Main Content */
-.main-content {
-  display: flex;
-  margin-top: 20px;
-}
-
-/* Sidebar Filters */
-.sidebar {
-  width: 25%;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.filter-group h4 {
-  margin-top: 20px;
-  font-size: 16px;
-}
-
-.filter-group label {
-  display: block;
-  margin: 5px 0;
-}
-
-/* Job Listings */
-.job-listings {
-  width: 75%;
-  margin-left: 20px;
-}
-
-.job-card {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.job-card h4 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-}
-
-.job-card p {
-  margin: 5px 0 0;
-  color: #777;
-}
-.job-card {
-  display: flex; /* Sử dụng flexbox để bố trí ảnh và nội dung */
-  align-items: center;
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.job-card img.job-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover; /* Đảm bảo ảnh được cắt phù hợp */
-  margin-right: 15px; /* Khoảng cách giữa ảnh và nội dung */
-  border-radius: 8px; /* Bo góc cho ảnh */
-}
-
-.job-card .job-info {
-  flex: 1; /* Đảm bảo phần nội dung chiếm hết không gian còn lại */
-}
-
-.job-card h4 {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-}
-
-.job-card p {
-  margin: 5px 0 0;
-  color: #777;
-}
+   
 
   </style>
 </head>
 <body>
-    <div class="header">
 
+  <div class="header">
+    <div class="left-section">
         <div class="logo">
-            <img alt="TopCV Logo" height="40"src="/logo.png" width="100%" />
+            <img alt="TopCV Logo" height="40" src="/logo.png" width="100%" />
         </div>
+        <div class="ten_trg">
+            <h3>ĐẠI HỌC TRƯỜNG NGUYÊN MÔI TRƯỜNG HÀ NỘI</h3>
+            <p>Hanoi University of Natural Resources and Environment</p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#">Việc làm</a>
+        <a href="#">Hồ sơ &amp; CV</a>
+        <a class="btn" href="./form_dn.html">Đăng nhập</a>
+        <a class="btn" href="./form_dk.html">Đăng ký</a>
+        <a href="#"><i class="fa-solid fa-user"></i></a>
+    </div>
+</div>
 
-         <div class="nav">
-            <a href="#">Việc làm </a>
-            <a href="#">Hồ sơ &amp; CV</a>
-            <a href="#">Công cụ</a>
-            <a href="#">Cẩm nang nghề nghiệp</a>
-            <a href="#">TopCV Pro </a>
-            <a class="btn" href="./formdangnhaodangky.html">Đăng nhập</a>
-            <a class="btn" href="#">Đăng ký</a>
-            <a class="btn btn-secondary" href="#">Đăng tuyển &amp; tìm hồ sơ </a>
-         </div>
-         
-       </div>
-
-      <header class="header">
-        <input type="text" placeholder="Tìm kiếm công việc..." class="search-bar">
-        <button class="search-button">Tìm kiếm</button>
-      </header>
+<div class="timkiem-job">
+  <div class="search-bar">
+      <input placeholder="Khoa ..." type="text" />
+      <button>Tìm kiếm</button>
+  </div>
+</div>
 
    <div class="container">
     <!-- Header -->
@@ -221,12 +64,10 @@ body {
         </div>
       </aside>
 
+
       <!-- Job Listings -->
       <section class="job-listings">
-        <div class="job-card">
-          <h4>Nhân viên kinh doanh</h4>
-          <p>Hồ Chí Minh | Không yêu cầu kinh nghiệm</p>
-        </div>
+      
         <div class="job-card">
             <img src="/logo.png" alt="Job Image" class="job-image">
             <div class="job-info">
@@ -244,16 +85,118 @@ body {
             </div>
           </div>
           
-        <div class="job-card">
-          <h4>Nhân viên tư vấn bán hàng</h4>
-          <p>Long An | Không yêu cầu kinh nghiệm</p>
-        </div>
-        <div class="job-card">
-          <h4>Trưởng nhóm kinh doanh</h4>
-          <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
-        </div>
+          <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+          <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+           <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+
+          <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+            <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+         <div class="job-card">
+            <img src="/logo.png" alt="Job Image" class="job-image">
+            <div class="job-info">
+              <h4>Trưởng nhóm kinh doanh</h4>
+              <p>Hồ Chí Minh | 1 năm kinh nghiệm</p>
+
+            </div>
+          </div>
+          
+       
       </section>
     </div>
   </div>
+
+<!-- endend -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-section">
+            <img src="logo.png" alt="TopCV Logo" class="footer-logo" />
+            <p>Tiếp lợi thế - Nối thành công</p>
+            <img src="./img/google_for_startup.webp" alt="Google for Startups" />
+            <p>Liên hệ</p>
+            <p>Hotline: <a href="tel:02466805958">(024) 6680 5958</a> (Giờ hành chính)</p>
+            <p>Email: <a href="mailto:hotro@topcv.vn">hotro@topcv.vn</a></p>
+            <p>Ứng dụng tải xuống</p>
+            <div class="app-links">
+              <img src="./img/app_store.webp" alt="App Store" />
+              <img src="./img/chplay.webp" alt="Google Play" />
+            </div>
+            <div class="social-icons">
+              <a href="#"><img src="./img/facebook.webp" alt="Facebook" /></a>
+              <a href="#"><img src="./img/youtube.webp" alt="YouTube" /></a>
+              <a href="#"><img src="./img/linkedin.webp" alt="LinkedIn" /></a>
+              <a href="#"><img src="./img/tiktok.webp" alt="TikTok" /></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Về TopCV</h4>
+            <ul>
+              <li><a href="#">Giới thiệu</a></li>
+              <li><a href="#">Góc báo chí</a></li>
+              <li><a href="#">Tuyển dụng</a></li>
+              <li><a href="#">Liên hệ</a></li>
+              <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Hồ sơ và CV</h4>
+            <ul>
+              <li><a href="#">Quản lý CV của bạn</a></li>
+              <li><a href="#">TopCV Profile</a></li>
+              <li><a href="#">Hướng dẫn viết CV</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Khám phá</h4>
+            <ul>
+              <li><a href="#">Ứng dụng di động TopCV</a></li>
+              <li><a href="#">Tính lương Gross - Net</a></li>
+              <li><a href="#">Tính lãi suất kép</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Xây dựng sự nghiệp</h4>
+            <ul>
+              <li><a href="#">Việc làm tốt nhất</a></li>
+              <li><a href="#">Việc làm lương cao</a></li>
+              <li><a href="#">Việc làm quản lý</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
