@@ -1,0 +1,154 @@
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    
+    body {
+        background: #e3e7f1;
+        padding: 20px;
+    }
+
+    .container{
+        
+        background-color: #fff;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        min-height: 80vh; /* Chiều cao tối thiểu 90% viewport height */
+ 
+        display: flex;
+        flex-direction: column; /* Xếp nội dung theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều dọc */
+        text-align: center; /* Căn giữa văn bản */
+        border-radius: 15px;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #2b3a5a;
+        padding: 15px 30px;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    nav .btn {
+        background: #475a88;
+        color: white;
+        padding: 10px 20px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .btn.red { background: #d9534f; }
+    .btn.blue { background: #5bc0de; }
+    
+    .dashboard {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .card {
+        background: #34495e;
+        padding: 20px;
+        color: white;
+        border-radius: 12px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    
+    /* Danh sách */
+    .list {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .list li {
+        background: rgba(255, 255, 255, 0.2);
+        margin: 8px 0;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    
+    /* Hiệu ứng 3D */
+    .card h2 {
+        margin-bottom: 15px;
+    }
+
+    .card h2 a {
+       text-decoration: none;
+       color: white;
+    }
+    
+    
+    /* Giả lập biểu đồ */
+    .chart {
+        width: 100%;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        position: relative;
+        margin: 5px;
+    }
+    
+    /* Biểu đồ tròn */
+    .pie {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        background: conic-gradient(#5bc0de 40%, #d9534f 40%);
+    }
+    
+    /* Biểu đồ cột */
+    .bar {
+        height: 10px;
+        background: linear-gradient(to right, #5bc0de 40%, #d9534f 40%);
+        
+    }
+
+  
+    /* Biểu đồ nhỏ */
+    .small-pie {
+        width: 100px;
+        height: 100px;
+        background: conic-gradient(#5bc0de 70%, #d9534f 30%);
+        border-radius: 50%;
+        margin: auto;
+    }
+    
+    /* Ảnh đại diện */
+    .avatars {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    .avatar {
+        width: 150px;
+        height: 150px;
+        background: white;
+        border-radius: 50%;
+    }
+
+
+    .avatar:nth-child(1) {
+        background-image: url('/logo.png');
+        background-size: cover;
+    }
+    
+    .avatar:nth-child(2) {
+        background-image: url('/quan.webp');
+        background-size: cover;
+    }
+    

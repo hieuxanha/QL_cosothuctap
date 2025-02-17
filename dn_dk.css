@@ -2,116 +2,173 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family: Arial, sans-serif;
+  }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: white;
+    background-color: #f5f5f5;
 }
 
 .container {
-    width: 350px;
-    position: relative;
-    background:white;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 8px #d0d0d0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    /* align-items: stretch; */
+}
+
+/* Bên trái: Form đăng ký */
+.left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Căn giữa nội dung */
+    background: white;
+    padding: 40px; /* Giảm padding để không quá rộng */
+}
+
+.left form {
+    width: 100%;
+    max-width: 600px; /* Giới hạn form không quá lớn */
+    background: white;
     padding: 20px;
+    border-radius: 10px;
+  
 }
 
-.form-box {
-    width: 100%;
+.right {
+    flex: 1; /* Đảm bảo kích thước bằng với left */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.button-box {
+.right img {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ảnh sẽ lấp đầy toàn bộ mà không bị méo */
+}
+
+h2 {
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+p {
     margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 36px;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+} */
+.checkbox-group {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Tạo khoảng cách giữa checkbox và nội dung */
+    margin-bottom: 15px;
+}
+
+.checkbox-group input {
+    width: 16px; /* Kích thước checkbox */
+    height: 16px;
+    margin: 0; /* Loại bỏ margin mặc định */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu cần */
+    line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+}
+
+
+.checkbox-group a {
+    color: #27ae60;
+    text-decoration: none;
+    margin: 0 5px; /* Tạo khoảng cách giữa các liên kết */
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #219150;
+}
+
+.or {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.social-buttons {
     display: flex;
     justify-content: space-between;
 }
 
-.toggle-btn {
-    padding: 10px 20px;
-    cursor: pointer;
-    background: #ff5722;
-    border: 0;
-    outline: none;
-    border-radius: 20px;
+.social-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
     color: white;
-    font-weight: bold;
-    width: 45%;
-    text-align: center;
-    transition: background 0.3s ease;
-}
-
-.toggle-btn:hover {
-    background: #ff784e;
-}
-
-.input-group {
-    width: 100%;
-    display: none; /* Form mặc định ẩn đi */
-    flex-direction: column;
-}
-
-.input-group h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.input-field {
-    width: 100%;
-    padding: 10px 0;
-    margin: 10px 0;
-    border-left: 0;
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 1px solid #999;
-    outline: none;
-    background: transparent;
-    transition: border-bottom 0.3s ease;
-}
-
-.input-field:focus {
-    border-bottom: 1px solid #ff5722;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 10px 30px;
     cursor: pointer;
-    margin-top: 20px;
-    background: #BCD5E3;
-    border: 0;
-    outline: none;
-    border-radius: 30px;
-    color: white;
-    font-weight: bold;
-    transition: background 0.3s ease;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
-.submit-btn:hover {
-    background: #579fc9;
+.google {
+    background: #db4437;
 }
 
-.check-box {
-    margin: 15px 10px;
+.facebook {
+    background: #3b5998;
 }
 
-span {
-    color: #777;
-    font-size: 12px;
+.linkedin {
+    background: #0077b5;
 }
 
-/* Khi hiển thị form đăng nhập */
-#loginForm {
-    display: block; /* Form đăng nhập hiển thị ban đầu */
-}
-
-#registerForm {
-    display: block; /* Form đăng ký sẽ bị ẩn */
+a {
+    color: #27ae60;
+    text-decoration: none;
 }

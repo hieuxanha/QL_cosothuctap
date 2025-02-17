@@ -175,20 +175,25 @@ body {
 
 /* Danh mục */
 /* Danh sách các mục dưới thanh tìm kiếm */
-.danhmuc{
+.danhmuc-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Đảm bảo hai phần tử căn trên cùng một hàng */
+  width: 104%;
+  gap: 20px;
+  flex-wrap: nowrap; /* Tránh xuống hàng */
+}
+
+.danhmuc {
+  flex: 1;
+  min-width: 270px;
+  max-width: 27%;
   background: #fff;
   border-radius: 16px;
+  padding: 14px;
   border-right: 1px solid #ececec;
-  /* display: flex; */
-  /* margin-top: 25px; */
-  /* margin-left: 22%; */
-  /* flex-direction: column; */
-  /* height: 298px; */
-  /* width: 270px; */
-width: 27%;
-height: 50%;
-/* padding: 10px; */
-  
+
+ 
 }
 
 .danhmuc_1{
@@ -224,27 +229,29 @@ height: 50%;
 
 
 .danhmuc_1_option_child {
-display: none;
-background-color: #fff;
-padding: 10px;
-position: absolute;
-left: calc(100%);
-top: 0px;
-/* width: 245%;
-height: 278px; */
-width: 280%;
-height: 108%;
-/* margin-left: 15px; */
-border-radius: 15px;
-z-index: 2;
-}
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  left: calc(100%);
+  top: -14px;
+  /* width: 245%;
+  height: 278px; */
+  width: 260%;
+  height: 108%;
+  /* margin-left: 15px; */
+  border-radius: 15px;
+  z-index: 2;
+  }
+  
+
 
 
 .danhmuc_1_heder{
   align-items: center;
   border-top: 1px solid #ececec;
   /* display: flex; */
-  /* height: 30px; */
+  height: 30px;
   justify-content: flex-end;
   padding: 14px 14px 8px 21px;
 }
@@ -273,18 +280,21 @@ z-index: 2;
   font-size: 16px; /* Kích thước icon */
 }
 
-.a img{
-
-  margin: auto;
-  width: 44%;
-  position: absolute;
-  top: 38%;
-  left: 37%;
-  border-radius: 10px;
-  height: 45%;
-  z-index: 1;
+.a {
+  flex: 1; /* Cân bằng kích thước với .danhmuc */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.a img {
+  width: 100%;  /* Đặt chiều rộng cố định */
+  height: 270px; /* Đặt chiều cao cố định */
+  
+
+  border-radius: 10px;
+  display: block;
+}
 
 
 
@@ -768,152 +778,27 @@ z-index: 2;
 
   
 
-/* Quy tắc áp dụng cho màn hình nhỏ hơn 170700px */
-@media screen and (max-width: 1700px) {
-  /* Thay đổi kiểu hoặc ẩn/hiện phần tử */
-  
-.search-bar input {
-  width: 50%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.search-bar button {
-  width: 90px;
-  padding: 10px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
 
 
 
-/* Danh mục */
-/* Danh sách các mục dưới thanh tìm kiếm */
-.danhmuc{
-  background: #fff;
-  border-radius: 16px;
-  border-right: 1px solid #ececec;
-  /* display: flex; */
-  /* margin-top: 25px; */
-  /* margin-left: 22%; */
-  /* flex-direction: column; */
-  /* height: 298px; */
-  /* width: 270px; */
-width: 29%;
-height: 60%;
-/* padding: 10px; */
-  
-}
-
-.danhmuc_1{
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  /* overflow: hidden; */
-  padding: 0px 0;
-  width: 100%;
- 
-}
-
-.danhmuc_1_option{
-        font-size: 16px;
-        font-weight: 350;
-        color: #263a4d;
-        padding: 15px;
-        justify-content: space-between;
-        /* margin-right: 70px; */
-        white-space: nowrap;
-
-}
-
-.danhmuc_1 {
-  position: relative;
-
-}
 
 
-.danhmuc_1_option:hover .danhmuc_1_option_child{
-  background-color: #fff;
-   display: block;
 
-}
-
-
-.danhmuc_1_option_child {
-display: none;
-background-color: #fff;
-padding: 10px;
-position: absolute;
-left: calc(100%);
-top: 0px;
-/* width: 245%;
-height: 278px; */
-width: 253%;
-height: 108%;
-/* margin-left: 15px; */
-border-radius: 15px;
-z-index: 2;
-}
-
-
-.danhmuc_1_heder{
-  align-items: center;
-  border-top: 1px solid #ececec;
-  /* display: flex; */
-  /* height: 30px; */
-  justify-content: flex-end;
-  padding: 14px 14px 8px 21px;
-}
-
-.danhmuc_1_heder-pag{
-  align-items: center;
-  display: flex;
-  gap: 11px;
-  height: 85%;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.danhmuc_1_heder-text{
-  /* color: #7f878f; */
-  color: #7f878f;
-  font-size: 14px;
-  font-weight: 500;
-
-}
-.cach {
-  margin-left: 50px;
-  
-}
-
-.fa-angle-right {
-  font-size: 16px; /* Kích thước icon */
-}
-.a img{
-
-  margin: auto;
-  width: 42%;
-  position: absolute;
-  top: 38%;
-  left: 39%;
-  border-radius: 10px;
-  height: 45%;
-  z-index: 1;
-}
-
-}
 
 /* @media screen and (max-width: 1362px){
           
+/* Responsive cho màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .danhmuc-container {
+     /* Chuyển thành dạng cột trên màn hình nhỏ */
+    align-items: center;
+  }
 
-} */
+  .danhmuc, .a {
+    max-width: 100%;
+  }
+}
+
 
 
 
