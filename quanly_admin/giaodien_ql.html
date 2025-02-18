@@ -27,63 +27,8 @@
 
     <!-- Custom styles for this template-->
     <link href="../css/sb-admin-2.min.css" rel="stylesheet">
-  <style>
-    .container {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 400px;
-}
+    <link rel="stylesheet" href="./giaodien_admin.css">
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.btn11 {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn1:hover {
-    background-color: #218838;
-}
-  </style>
 </head>
 
 <body id="page-top">
@@ -363,117 +308,99 @@ textarea {
                     </ul>
 
                 </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-
-                <!-- xóa bỏ -->
-
-
-                <div class="container">
-                    <h1>Thêm Cơ Sở Mới</h1>
-                    <form action="add_data.php" method="POST">
-                        <div class="form-group">
-                            <label for="ma_co_so">Mã Cơ Sở:</label>
-                            <input type="number" id="ma_co_so" name="ma_co_so" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="ten_co_so">Tên Cơ Sở:</label>
-                            <input type="text" id="ten_co_so" name="ten_co_so" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="dia_chi">Địa Chỉ:</label>
-                            <input type="text" id="dia_chi" name="dia_chi">
-                        </div>
-                        <div class="form-group">
-                            <label for="linh_vuc">Lĩnh Vực:</label>
-                            <input type="text" id="linh_vuc" name="linh_vuc">
-                        </div>
-                        <div class="form-group">
-                            <label for="so_luong">Số Lượng:</label>
-                            <input type="number" id="so_luong" name="so_luong">
-                        </div>
-                        <div class="form-group">
-                            <label for="mo_ta">Mô Tả:</label>
-                            <textarea id="mo_ta" name="mo_ta" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn11">Thêm Dữ Liệu</button>
-                    </form>
-                </div>
-                <!-- them sua xoa -->
-                <div class="content" style="margin-left: 5px;">
-                    <h2></h2>
-                    <table class="table table-bordered">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>STT</th>
-                                <th>Mã hàng</th>
-                                <th>Tên hàng</th>
-                                <th>Logo</th>
-                                <th>Sửa</th>
-                                <th>Xóa</th>
-                            </tr>
-                        </thead>
-                        <tbody id="manufacturer-list">
-                            <!-- Dynamic rows will be inserted here -->
-                        </tbody>
-                    </table>
-                    <button class="btn btn-primary" onclick="addNew()">Thêm mới</button>
-                </div>
-                <script>
-                    const manufacturers = [
-                        { id: 1, code: 'MF1104713805111490', name: 'TOYOTA', logo: 'toyota-logo.png' },
-                        { id: 2, code: 'MF1574395200013741142', name: 'YAMAHA', logo: 'yamaha-logo.png' },
-                        { id: 3, code: 'MF16962183935326640', name: 'DCAR', logo: 'dcar-logo.png' },
-                        // Add more entries here...
-                    ];
+           <!-- noi dung -->
+           <div class="container">
+            <header>
+                <!-- <img src="/logo.png" alt=""> -->
+                <h1>Quản lý</h1>
+        
+                <nav>
+                    <!-- <button class="btn">DHAHPAND</button> -->
+                    <!-- <button class="btn red">Số Lượng Sinh Viên</button>
+                    <button class="btn blue">Số cơ sở thực tập</button>
+                    <button class="btn blue">Số đơn đăng ký</button> -->
+                    <button class="btn blue">Đăng xuất</button>
+                </nav>
+            </header>
+            
+            <main class="dashboard">
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản lý sinh viên</a></h2>
+                    <div class="stats">
+                        <p>Total: <span>3.9%</span></p>
+                        <p>Active: <span>3.5%</span></p>
+                        <p>Actual: <span>3.3%</span></p>
+                        <p>Archived: <span>2.7%</span></p>
+                    </div>
+                </section>
                 
-                    function loadManufacturers() {
-                        const list = document.getElementById('manufacturer-list');
-                        list.innerHTML = '';
-                        manufacturers.forEach((manufacturer, index) => {
-                            list.innerHTML += `
-                                <tr>
-                                    <td>${index + 1}</td>
-                                    <td>${manufacturer.code}</td>
-                                    <td>${manufacturer.name}</td>
-                                    <td><img src="${manufacturer.logo}" alt="${manufacturer.name}" width="50"></td>
-                                    <td><button class="btn btn-warning">Sửa</button></td>
-                                    <td><button class="btn btn-danger" onclick="deleteManufacturer(${manufacturer.id})">Xóa</button></td>
-                                </tr>
-                            `;
-                        });
-                    }
-                
-                    function deleteManufacturer(id) {
-                        const index = manufacturers.findIndex(m => m.id === id);
-                        if (index > -1) {
-                            manufacturers.splice(index, 1);
-                            loadManufacturers();
-                        }
-                    }
-                
-                    function addNew() {
-                        const newManufacturer = {
-                            id: manufacturers.length + 1,
-                            code: `MF${Date.now()}`,
-                            name: prompt('Enter manufacturer name:'),
-                            logo: 'default-logo.png'
-                        };
-                        manufacturers.push(newManufacturer);
-                        loadManufacturers();
-                    }
-                
-                    window.onload = loadManufacturers;
-                </script>
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản lý giảng viên</a></h2>
+                    <div class="chart pie"></div>
+                </section>
+        
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản cơ sở thực tập</a></h2>
+                    <div class="chart bar"></div>
+                    <div class="chart bar"></div>
+                    <div class="chart bar"></div>
+                    <div class="chart bar"></div>
+                </section>
+        
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản lý đơn đăng ký thực tập</a></h2>
+                    <div class="avatars">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                    </div>
+                </section>
+        
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản lý quyền truy cập</a></h2>
+                    <ul class="list">
+                        <li>Students - 6.3%, 6%</li>
+                        <li>Students - 5.2%, 5%</li>
+                        <li>Applications - 3.2%, 6%</li>
+                        <li>Complications - 8.1%, 5%</li>
+                    </ul>
+                </section>
+        
+                <section class="card">
+                    <h2><a href="./giaodien_ql.html">Thống kê</a></h2>
+                    <button class="btn red">CONTROL</button>
+                    <button class="btn blue">CONTROL</button>
+                </section> 
+        
+                <!-- <section class="card">
+                    <h2><a href="./giaodien_ql.html">Quản lý phân quyền truy cập</a></h2>
+                    <div class="chart small-pie"></div>
+                </section> -->
+        
+                <!-- <section class="card">
+                    <h2>APSESM CONTROL</h2>
+                    <ul class="list">
+                        <li>Reports - 6.5%</li>
+                        <li>System Settings - 9%</li>
+                    </ul>
+                </section>
+                <section class="card">
+                    <h2>APSESM CONTROL</h2>
+                    <ul class="list">
+                        <li>Reports - 6.5%</li>
+                        <li>System Settings - 9%</li>
+                    </ul>
+                </section> -->
+            </main>
+        </div>
+            
 
 
-             
-            <!-- End of Main Content -->
 
-            <!-- Footer -->
-          
-            <!-- End of Footer -->
+
+
+
+
+
 
         </div>
         <!-- End of Content Wrapper -->

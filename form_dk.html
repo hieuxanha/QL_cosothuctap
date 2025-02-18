@@ -41,17 +41,28 @@
                     <label>Xác nhận mật khẩu</label>
                     <input type="password" placeholder="Nhập lại mật khẩu">
                 </div>
- 
+
+                <div class="input-group">
+                    <label for="khoa">Các Khoa</label>
+                    <select id="khoa" name="khoa" disabled>
+                        <option value="" disabled selected>Chọn danh mục</option>
+                        <option value="cttt">CTTT</option>
+                        <option value="abcc">ABCC</option>
+                        <option value="kkkkkk">KKKKKK</option>
+                    </select>
+                </div>
+                
                 <div class="checkbox-group">
-                    <input type="radio" id="sinhvien" name="user_type">
+                    <input type="radio" id="sinhvien" name="user_type" onclick="toggleSelect(true)">
                     <label for="sinhvien">Sinh viên</label>
                 
-                    <input type="radio" id="giangvien" name="user_type">
+                    <input type="radio" id="giangvien" name="user_type" onclick="toggleSelect(true)">
                     <label for="giangvien">Giảng viên</label>
                 
-                    <input type="radio" id="coso" name="user_type">
+                    <input type="radio" id="coso" name="user_type" onclick="toggleSelect(false)">
                     <label for="coso">Cơ sở thực tập</label>
                 </div>
+              
 
                 <div class="checkbox-group">
                     <input type="checkbox" id="agree">
@@ -77,5 +88,11 @@
             <img src="/img/image111.png" alt="Banner">
         </div>     
     </div>
+
+    <script>
+        function toggleSelect(enable) {
+            document.getElementById("khoa").disabled = !enable;
+        }
+    </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     
     body {
         background: #e3e7f1;
-        padding: 20px;
+        /* padding: 20px; */
     }
 
     .container{
@@ -17,7 +17,7 @@
         max-width: 1200px;
         margin: 20px auto;
         padding: 0 20px;
-        min-height: 80vh; /* Chiều cao tối thiểu 90% viewport height */
+        min-height: 60vh; /* Chiều cao tối thiểu 90% viewport height */
  
         display: flex;
         flex-direction: column; /* Xếp nội dung theo chiều dọc */
