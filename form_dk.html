@@ -24,7 +24,7 @@
                     <label>Họ và tên</label>
                     <input type="text" placeholder="Nhập họ tên">
                 </div>
-                <!-- <div class="input-group">
+                <!-- <div class="input-group" id="masv-group" style="display: none;">
                     <label>Mã sinh viên</label>
                     <input type="number" placeholder="Nhập mã sinh viên">
                 </div> -->
@@ -53,13 +53,13 @@
                 </div>
                 
                 <div class="checkbox-group">
-                    <input type="radio" id="sinhvien" name="user_type" onclick="toggleSelect(true)">
+                    <input type="radio" id="sinhvien" name="user_type" onclick="toggleSelect(true, 'sinhvien')">
                     <label for="sinhvien">Sinh viên</label>
                 
-                    <input type="radio" id="giangvien" name="user_type" onclick="toggleSelect(true)">
+                    <input type="radio" id="giangvien" name="user_type" onclick="toggleSelect(true, 'giangvien')">
                     <label for="giangvien">Giảng viên</label>
                 
-                    <input type="radio" id="coso" name="user_type" onclick="toggleSelect(false)">
+                    <input type="radio" id="coso" name="user_type" onclick="toggleSelect(false, 'coso')">
                     <label for="coso">Cơ sở thực tập</label>
                 </div>
               
@@ -90,9 +90,18 @@
     </div>
 
     <script>
-        function toggleSelect(enable) {
+        function toggleSelect(enable, userType) {
             document.getElementById("khoa").disabled = !enable;
+        
+
+        var masv = document.getElementById("masv-group");
+
+        if (userType === "sinhvien" || userType === "giangvien") {
+            masv.style.display = "block";
+        } else {
+            masv.style.display = "none";
         }
+    }
     </script>
 </body>
 </html>

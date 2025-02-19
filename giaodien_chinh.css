@@ -213,6 +213,9 @@ body {
         padding: 15px;
         /* margin-right: 70px; */
         overflow: hidden;
+        text-overflow: ellipsis;
+        
+        
 }
 
 .danhmuc_1 {
