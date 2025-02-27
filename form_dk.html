@@ -1,107 +1,146 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng ký - TopCV</title>
-    <link rel="stylesheet" href="/dn_dk.css">
+    <link rel="stylesheet" href="/dn_dk.css" />
 
-    <style>
-  
-
-
-    </style>
-</head>
-<body>
+    <style></style>
+  </head>
+  <body>
     <div class="container">
-        <!-- Cột bên trái: Form đăng ký -->
-        <div class="left">
-            <h2>Chào mừng bạn đến </h2>
-            <p>Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý tưởng</p>
+      <!-- Cột bên trái: Form đăng ký -->
+      <div class="left">
+        <h2>Chào mừng bạn đến</h2>
+        <p>
+          Cùng xây dựng một hồ sơ nổi bật và nhận được các cơ hội sự nghiệp lý
+          tưởng
+        </p>
+
+        <form>
+          <div class="input-group">
+            <label>Họ và tên</label>
+            <input type="text" placeholder="Nhập họ tên" />
+          </div>
+          <div class="input-group" id="masv-group" style="display: none">
+            <label>Mã sinh viên</label>
+            <input type="number" placeholder="Nhập mã sinh viên" />
+          </div>
+          <div class="input-group" id="magv-group" style="display: none">
+            <label>Số hiệu giảng viên </label>
+            <input type="number" placeholder="Số hiệu giảng viên" />
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Nhập email" />
+          </div>
+          <div class="input-group">
+            <label>Mật khẩu</label>
+            <input type="password" placeholder="Nhập mật khẩu" />
+          </div>
+
+          <div class="input-group">
+            <label>Xác nhận mật khẩu</label>
+            <input type="password" placeholder="Nhập lại mật khẩu" />
+          </div>
+
+          <div class="input-group">
+            <select id="khoa" name="khoa" class="khoakhoa">
+                <option value="" disabled selected>Chọn danh mục</option>
+                <option value="kinh_te">Khoa Kinh tế</option>
+                <option value="moi_truong">Khoa Môi trường</option>
+                <option value="quan_ly_dat_dai">Khoa Quản lý đất đai</option>
+                <option value="khi_tuong_thuy_van">Khoa Khí tượng thủy văn</option>
+                <option value="trac_dia_ban_do">Khoa Trắc địa bản đồ và Thông tin địa lý</option>
+                <option value="dia_chat">Khoa Địa chất</option>
+                <option value="tai_nguyen_nuoc">Khoa Tài nguyên nước</option>
+                <option value="cntt">Khoa Công nghệ thông tin</option>
+                <option value="ly_luan_chinh_tri">Khoa Lý luận chính trị</option>
+                <option value="bien_hai_dao">Khoa Khoa học Biển và Hải đảo</option>
+                <option value="khoa_hoc_dai_cuong">Khoa Khoa học Đại cương</option>
+                <option value="the_chat_quoc_phong">Khoa Giáo dục thể chất và Giáo dục quốc phòng</option>
+                <option value="bo_mon_luat">Bộ môn Luật</option>
+                <option value="bien_doi_khi_hau">Bộ môn Biến đổi khí hậu và PT bền vững</option>
+                <option value="ngoai_ngu">Bộ môn Ngoại ngữ</option>
+            </select>
             
-            <form>
-                <div class="input-group">
-                    <label>Họ và tên</label>
-                    <input type="text" placeholder="Nhập họ tên">
-                </div>
-                <!-- <div class="input-group" id="masv-group" style="display: none;">
-                    <label>Mã sinh viên</label>
-                    <input type="number" placeholder="Nhập mã sinh viên">
-                </div> -->
-                <div class="input-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Nhập email">
-                </div>
-                <div class="input-group">
-                    <label>Mật khẩu</label>
-                    <input type="password" placeholder="Nhập mật khẩu">
-                </div>
+          </div>
 
-                <div class="input-group">
-                    <label>Xác nhận mật khẩu</label>
-                    <input type="password" placeholder="Nhập lại mật khẩu">
-                </div>
+          <div class="checkbox-group">
+            <input
+              type="radio"
+              id="sinhvien"
+              name="user_type"
+              onclick="toggleSelect(true, 'sinhvien')"
+            />
+            <label for="sinhvien">Sinh viên</label>
 
-                <div class="input-group">
-                    <label for="khoa">Các Khoa</label>
-                    <select id="khoa" name="khoa" disabled>
-                        <option value="" disabled selected>Chọn danh mục</option>
-                        <option value="cttt">CTTT</option>
-                        <option value="abcc">ABCC</option>
-                        <option value="kkkkkk">KKKKKK</option>
-                    </select>
-                </div>
-                
-                <div class="checkbox-group">
-                    <input type="radio" id="sinhvien" name="user_type" onclick="toggleSelect(true, 'sinhvien')">
-                    <label for="sinhvien">Sinh viên</label>
-                
-                    <input type="radio" id="giangvien" name="user_type" onclick="toggleSelect(true, 'giangvien')">
-                    <label for="giangvien">Giảng viên</label>
-                
-                    <input type="radio" id="coso" name="user_type" onclick="toggleSelect(false, 'coso')">
-                    <label for="coso">Cơ sở thực tập</label>
-                </div>
-              
+            <input
+              type="radio"
+              id="giangvien"
+              name="user_type"
+              onclick="toggleSelect(true, 'giangvien')"
+            />
+            <label for="giangvien">Giảng viên</label>
 
-                <div class="checkbox-group">
-                    <input type="checkbox" id="agree">
-                    <label for="agree">Tôi đã đọc và đồng ý với  <a href="#"> Điều khoản dịch vụ </a> và <a href="#">Chính sách bảo mật</a></label>
-                </div>
+            <input
+              type="radio"
+              id="coso"
+              name="user_type"
+              onclick="toggleSelect(false, 'coso')"
+            />
+            <label for="coso">Cơ sở thực tập</label>
+          </div>
 
-                <button type="submit" class="btn">Đăng ký</button>
+          <div class="checkbox-group">
+            <input type="checkbox" id="agree" />
+            <label for="agree"
+              >Tôi đã đọc và đồng ý với <a href="#"> Điều khoản dịch vụ </a> và
+              <a href="#">Chính sách bảo mật</a></label
+            >
+          </div>
 
-                <p class="or">Hoặc đăng nhập bằng</p>
-                
-                <div class="social-buttons">
-                    <button class="google">Google</button>
-                    <button class="facebook">Facebook</button>
-                    <button class="linkedin">LinkedIn</button>
-                </div>
+          <button type="submit" class="btn">Đăng ký</button>
 
-                <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
-            </form>
-        </div>
+          <p class="or">Hoặc đăng nhập bằng</p>
 
-        <!-- Cột bên phải: Hình ảnh -->
-        <div class="right">
-            <img src="/img/image111.png" alt="Banner">
-        </div>     
+          <div class="social-buttons">
+            <button class="google">Google</button>
+            <button class="facebook">Facebook</button>
+            <button class="linkedin">LinkedIn</button>
+          </div>
+
+          <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
+        </form>
+      </div>
+
+      <!-- Cột bên phải: Hình ảnh -->
+      <div class="right">
+        <img src="/img/image111.png" alt="Banner" />
+      </div>
     </div>
 
     <script>
-        function toggleSelect(enable, userType) {
-            document.getElementById("khoa").disabled = !enable;
-        
+      function toggleSelect(enable, userType) {
+        document.getElementById("khoa").disabled = !enable;
 
         var masv = document.getElementById("masv-group");
 
-        if (userType === "sinhvien" || userType === "giangvien") {
-            masv.style.display = "block";
+        if (userType === "sinhvien") {
+          masv.style.display = "block";
         } else {
-            masv.style.display = "none";
+          masv.style.display = "none";
         }
-    }
+
+        var magv = document.getElementById("magv-group");
+
+        if (userType === "giangvien") {
+          magv.style.display = "block";
+        } else {
+          magv.style.display = "none";
+        }
+      }
     </script>
-</body>
+  </body>
 </html>

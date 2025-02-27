@@ -92,7 +92,7 @@ body {
 .search-section {
   position: relative;
   padding: 25px;
-  text-align: center;
+  
   background: none;
   color: #fff;
   /* height: 55%; */
@@ -100,6 +100,15 @@ body {
   overflow: hidden;
   
 }
+.search-section1 {
+  text-align: center; /* Căn giữa nội dung */
+  margin: 0 auto; /* Căn giữa theo chiều ngang */
+  display: flex;
+  flex-direction: column; /* Hiển thị nội dung theo cột */
+  align-items: center; /* Căn giữa các phần tử con */
+  max-width: 1400px; /* Giới hạn chiều rộng */
+}
+
 
 .search-section::before {
   content: '';
@@ -205,18 +214,47 @@ body {
   width: 100%;
  
 }
-
-.danhmuc_1_option{
-        font-size: 16px;
-        font-weight: 350;
-        color: #263a4d;
-        padding: 15px;
-        /* margin-right: 70px; */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        
-        
+.danhmuc_1_option {
+  font-size: 16px;
+  font-weight: 350;
+  color: #263a4d;
+  padding: 15px ;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  width: 90%; /* Đảm bảo phần tử không bị tràn */
+  white-space: nowrap;
+  
 }
+
+
+.danhmuc_test {
+  display: inline-block; /* Giữ nội dung trong một dòng */
+  max-width: 200px; /* Điều chỉnh độ rộng tối đa */
+  white-space: nowrap; /* Không xuống dòng */
+  overflow: hidden; /* Ẩn phần vượt quá */
+  text-overflow: ellipsis; /* Hiển thị dấu "..." khi chữ quá dài */
+  max-width: 20ch;
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+
+.cach {
+  
+  flex-shrink: 0; /* Không cho icon bị co lại */
+}
+
+
+
+.danhmuc_1_option a {
+  
+  flex-shrink: 0; /* Giữ nguyên kích thước, không bị thu nhỏ */
+  text-decoration: none; /* Bỏ gạch chân */
+
+  float: right;
+}
+
 
 .danhmuc_1 {
   position: relative;
@@ -275,9 +313,9 @@ body {
   font-weight: 500;
 
 }
-.cach {
-  margin-left: 70px; /* Tạo khoảng cách giữa chữ và icon */
-}
+/* .cach {
+  margin-left: 70px; 
+} */
 
 .fa-angle-right {
   font-size: 16px; /* Kích thước icon */

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopCV - Tìm việc làm nhanh 24h, việc làm mới nhất toàn quốc</title>
+  <style>
+    :root {
+      --primary-color: #28a745;
+      --secondary-color: #17a2b8;
+      --dark-bg: #10403b;
+      --light-bg: #f8f9fa;
+      --white: #ffffff;
+      --gray: #6c757d;
+      --light-gray: #e9ecef;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo img {
+      height: 30px;
+      margin-right: 5px;
+    }
+    
+    .logo span {
+      font-size: 12px;
+      color: var(--gray);
+    }
+    
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .nav a {
+      color: #333;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      font-weight: 500;
+    }
+    
+    .btn-outline {
+      background-color: transparent;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+    
+    .btn-dark {
+      background-color: #343a40;
+      color: var(--white);
+    }
+    
+    .hero {
+      background-color: var(--dark-bg);
+      color: var(--white);
+      padding: 20px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(135deg, rgba(0, 150, 136, 0.2) 0%, rgba(0, 150, 136, 0.1) 100%);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .hero h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #8df5cc;
+    }
+    
+    .hero p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .search-container {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .search-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .form-group {
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+    
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 5px;
+      border: 1px solid var(--light-gray);
+      font-size: 14px;
+    }
+    
+    .search-btn {
+      padding: 12px 20px;
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    
+    .category-list {
+      background-color: var(--white);
+      border-radius: 8px;
+      margin-top: 20px;
+      display: flex;
+    }
+    
+    .category-sidebar {
+      width: 250px;
+      border-right: 1px solid var(--light-gray);
+    }
+    
+    .category-item {
+      padding: 15px 20px;
+      border-bottom: 1px solid var(--light-gray);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .category-item:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .category-banner {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .banner-content {
+      text-align: center;
+      color: var(--white);
+      padding: 20px;
+      background-color: #1a73e8;
+      border-radius: 8px;
+      width: 100%;
+      position: relative;
+    }
+    
+    .job-list-section {
+      padding: 20px;
+    }
+    
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .section-title {
+      font-size: 22px;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .filter-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 5px 0;
+    }
+    
+    .filter-tab {
+      padding: 8px 15px;
+      background-color: #f0f0f0;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 14px;
+    }
+    
+    .filter-tab.active {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+    
+    .job-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .job-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .job-card-header {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .company-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+    
+    .job-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .company-name {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    
+    .job-details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: auto;
+    }
+    
+    .job-location, .job-salary {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+    }
+    
+    .favorite-btn {
+      background: none;
+      border: none;
+      color: var(--gray);
+      cursor: pointer;
+      margin-left: auto;
+      font-size: 18px;
+    }
+    
+    .pro-badge {
+      background-color: #ffc107;
+      color: #333;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    .top-badge {
+      background-color: #28a745;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 768px) {
+      .nav, .auth-buttons {
+        display: none;
+      }
+      
+      .category-sidebar {
+        width: 100%;
+        border-right: none;
+      }
+      
+      .category-list {
+        flex-direction: column;
+      }
+      
+      .form-group {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="/api/placeholder/100/30" alt="TopCV Logo">
+      <span>Tiếp thị - Nổi thành công</span>
+    </div>
+    
+    <nav class="nav">
+      <a href="#">Việc làm</a>
+      <a href="#">Hồ sơ & CV</a>
+      <a href="#">Công cụ</a>
+      <a href="#">Cẩm nang nghề nghiệp</a>
+      <a href="#">TopCV Pro</a>
+    </nav>
+    
+    <div class="auth-buttons">
+      <button class="btn btn-outline">Đăng nhập</button>
+      <button class="btn btn-primary">Đăng ký</button>
+      <button class="btn btn-dark">Đăng tuyển & tìm hồ sơ</button>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Tìm việc làm nhanh 24h, việc làm mới nhất trên toàn quốc.</h1>
+      <p>Tiếp cận 40,000+ tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại Việt Nam</p>
+      
+      <div class="search-container">
+        <form class="search-form">
+          <div class="form-group">
+            <input type="text" placeholder="Danh mục Nghề">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Tất cả tỉnh/thành phố">
+          </div>
+          <button type="submit" class="search-btn">Tìm kiếm</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Categories Section -->
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="category-list">
+      <div class="category-sidebar">
+        <div class="category-item">
+          Kinh doanh/Bán hàng <span>›</span>
+        </div>
+        <div class="category-item">
+          Marketing/PR/Quảng cáo <span>›</span>
+        </div>
+        <div class="category-item">
+          Dịch vụ khách hàng/Vận hành <span>›</span>
+        </div>
+        <div class="category-item">
+          Nhân sự/Hành chính/Pháp chế <span>›</span>
+        </div>
+        <div class="category-item">
+          Tài chính/Ngân hàng/Bảo hiểm <span>›</span>
+        </div>
+        <div class="category-item">
+          Công nghệ Thông tin <span>›</span>
+        </div>
+        <div class="category-item">
+          1/4 <span>›</span>
+        </div>
+      </div>
+      
+      <div class="category-banner">
+        <div class="banner-content" style="background: url('/api/placeholder/600/300') center/cover no-repeat;">
+          <div style="background-color: rgba(0,0,0,0.6); padding: 20px; border-radius: 8px;">
+            <img src="/api/placeholder/120/50" alt="Apollo English" style="margin-bottom: 15px;">
+            <h2 style="margin-bottom: 10px; font-size: 22px;">CHUYÊN VIÊN<br>TƯ VẤN TUYỂN SINH TOÀN QUỐC</h2>
+            <h3 style="margin-bottom: 20px; font-size: 18px;">THU NHẬP 12-20 TRIỆU/ THÁNG</h3>
+            <button class="btn btn-primary">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Job Listings Section -->
+    <section class="job-list-section">
+      <div class="section-header">
+        <h2 class="section-title">Việc làm tốt nhất <img src="/api/placeholder/100/30" alt="Toppy AI"></h2>
+        <a href="#" style="color: var(--primary-color); font-size: 14px;">Xem tất cả</a>
+      </div>
+      
+      <div class="filter-tabs">
+        <div class="filter-tab active">Ngẫu Nhiên</div>
+        <div class="filter-tab">Hà Nội</div>
+        <div class="filter-tab">Thành phố Hồ Chí Minh</div>
+        <div class="filter-tab">Miền Bắc</div>
+        <div class="filter-tab">Miền Nam</div>
+      </div>
+      
+      <div style="background-color: #e9f5fe; padding: 15px; border-radius: 8px; margin: 20px 0; display: flex; align-items: center; gap: 10px;">
+        <span style="color: #0366d6;">💡</span>
+        <p style="font-size: 14px;">Gợi ý: Di chuột vào tiêu đề việc làm để xem thêm thông tin chi tiết</p>
+        <span style="margin-left: auto; cursor: pointer;">×</span>
+      </div>
+      
+      <div class="job-list">
+        <!-- Job Card 1 -->
+        <div class="job-card">
+          <div class="job-card-header">
+            <img src="/api/placeholder/50/50" alt="Techcombank" class="company-logo">
+            <div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <h3 class="job-title">Chuyên Viên Cao Cấp Khách Hàng Ưu Tiên</h3>
+              </div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <span class="pro-badge">Pro</span>
+                <span class="company-name">NGÂN HÀNG THƯƠNG MẠI CP TECHCOMBANK</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="job-details">
+            <div class="job-salary">Trên 15 triệu</div>
+            <div class="job-location">Hà Nội & 4 nơi khác</div>
+            <button class="favorite-btn">♡</button>
+          </div>
+        </div>
+        
+        <!-- Job Card 2 -->
+        <div class="job-card">
+          <div class="job-card-header">
+            <img src="/api/placeholder/50/50" alt="Công ty TNHH Thương mại và Truyền thông Logia" class="company-logo">
+            <div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <h3 class="job-title">Nhân Viên Kinh Doanh/ Sales Executive</h3>
+              </div>
+              <span class="company-name">Công ty TNHH Thương mại và Truyền thông Logia</span>
+            </div>
+          </div>
+          
+          <div class="job-details">
+            <div class="job-salary">Từ 30 triệu</div>
+            <div class="job-location">Hà Nội</div>
+            <button class="favorite-btn">♡</button>
+          </div>
+        </div>
+        
+        <!-- Job Card 3 -->
+        <div class="job-card">
+          <div class="job-card-header">
+            <img src="/api/placeholder/50/50" alt="Công ty Cổ phần MISA" class="company-logo">
+            <div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <span class="top-badge">TOP</span>
+                <h3 class="job-title">Nhân Viên Phát Triển Đối Tác</h3>
+              </div>
+              <div style="display: flex; align-items: center; gap: 5px;">
+                <span class="pro-badge">Pro</span>
+                <span class="company-name">Công ty Cổ phần MISA</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="job-details">
+            <div class="job-salary">15 - 30 triệu</div>
+            <div class="job-location">Hồ Chí Minh</div>
+            <button class="favorite-btn">♡</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Chat Widget -->
+  <div style="position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+    <div style="background-color: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px;">
+      <img src="/api/placeholder/40/40" alt="Support Agent" style="border-radius: 50%;">
+      <div>
+        <div style="font-weight: 500;">Ms. Hương Nguyễn</div>
+        <div style="font-size: 12px; color: #4CAF50;">Hỗ trợ trực tuyến</div>
+      </div>
+    </div>
+    
+    <button style="background-color: #4CAF50; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: none; cursor: pointer; font-size: 20px;">✓</button>
+  </div>
+</body>
+</html>

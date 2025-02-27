@@ -141,13 +141,12 @@ width: 800px;
 .company-header {
   position: relative;
   width: 100%;
- 
+
   margin: 0 auto;
   text-align: center;
-  background-color: #008000; 
+  background-color: #19c119; 
   /* Màu nền giống ảnh */
   border-radius: 10px;
-  
   padding-bottom: 70px;
 }
 
@@ -160,7 +159,7 @@ width: 800px;
 /* Logo công ty */
 .company-logo {
   position: absolute;
-  top: 65%;
+  margin-top: 0;
   left: 10%;
   transform: translate(-50%, -50%);
   width: 100px;
@@ -175,10 +174,11 @@ width: 800px;
 }
 
 .company-cover img{
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 .company-logo img {
+  
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -190,15 +190,17 @@ width: 800px;
   color: white;
 }
 
-.company-header h2 {
+.company-header h2  {
   font-size: 20px;
   margin-bottom: 5px;
 }
 
-.company-header a {
+
+.company-info a{
   color: white;
   text-decoration: none;
 }
+
 
 /* Nút Theo dõi công ty */
 .follow-button {
@@ -206,12 +208,17 @@ width: 800px;
   top: 80%;
   right: 15px;
  
-  color: green;
+  /* color: green; */
   padding: 8px 15px;
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.follow-button{
+  background-color: #fff;
+  color:  #19c119; 
 }
 
 /* PHẦN 2 + 3: Hai thẻ dưới */
@@ -279,4 +286,24 @@ width: 800px;
 
 .feedback-button:hover {
   background-color: #0056b3;
+}
+
+/* Khi màn hình nhỏ, logo nằm trong .company-header */
+@media (max-width: 1200px) {
+  .company-logo {
+    position: relative;
+    top: -83px;
+    left: auto;
+    transform: none;
+    margin: 10px auto;
+    
+  }
+  .company-header{
+    padding-bottom: 50px
+  }
+
+  .company-header div:nth-child(3) {
+   
+    color: white;
+  }
 }

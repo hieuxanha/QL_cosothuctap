@@ -199,25 +199,6 @@ body {
   margin-left: 10px;
 }
 
-/* phần dướidưới */
-.dashboard-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-left: 27px;
-  margin-right: 15px;
-}
-
-.card {
-  background: white;
-  padding: 70px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-canvas {
-  max-width: 100%;
-}
 
 /* .fa-solid .fa-circle-user{
  margin: 20px ;
@@ -226,3 +207,63 @@ canvas {
 .icons .fa-solid {
   margin: 20px;
 }
+.pending-list {
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pending-list h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.approve {
+  background: #4CAF50;
+  color: white;
+}
+
+.reject {
+  background: #e74c3c;
+  color: white;
+  margin-left: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
